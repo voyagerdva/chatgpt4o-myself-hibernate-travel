@@ -22,7 +22,16 @@ public class Trip {
     @Column(name = "date")
     private String date;
 
-    @Column(name = "date")
+
+
+    // @ManyToMany: Trip-Department
+    @ManyToMany(
+            fetch = FetchType.LAZY,
+            cascade = CascadeType.ALL)
+    @JoinTable(
+            name = "deps_trips",
+            joinColumns = @JoinColumn(name = "trip_id"),
+            inverseJoinColumns = @JoinColumn(name = "department_id"))
     private Set<Department> departmentSet;
 
 }

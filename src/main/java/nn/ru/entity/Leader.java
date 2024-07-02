@@ -27,6 +27,8 @@ public class Leader {
 
 
 
+
+
     // @OneToOne: Leader-Department
     @OneToOne(
             fetch = FetchType.LAZY,

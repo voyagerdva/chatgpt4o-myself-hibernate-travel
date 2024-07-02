@@ -55,14 +55,13 @@ public class Department {
 
     // @ManyToMany: Department-Trip
     @ManyToMany(
-            mappedBy = "department",
+            mappedBy = "departmentSet",
             fetch = FetchType.LAZY,
             cascade = CascadeType.ALL)
     @JoinTable(
             name = "deps_trips",
             joinColumns = @JoinColumn(name = "department_id"),
-            inverseJoinColumns = @JoinColumn(name = "trip_id")
-    )
+            inverseJoinColumns = @JoinColumn(name = "trip_id"))
     private Set<Trip> tripSet;
 
 
