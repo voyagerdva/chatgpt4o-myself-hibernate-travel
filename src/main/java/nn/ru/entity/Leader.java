@@ -10,8 +10,6 @@ import java.util.Objects;
 @Entity
 @Table(name = "leaders")
 @Data
-@NoArgsConstructor
-@AllArgsConstructor
 public class Leader {
 
     @Id

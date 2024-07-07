@@ -11,8 +11,8 @@ import java.util.Set;
 @Entity
 @Table(name = "departments")
 @Data
-@NoArgsConstructor
-@AllArgsConstructor
+//@NoArgsConstructor
+//@AllArgsConstructor
 public class Department {
 
     @Id
@@ -29,6 +29,16 @@ public class Department {
     @Column(name = "salary_max")
     private Integer salaryMax;
 
+
+    public Department(Long id, String name, Integer salaryMin, Integer salaryMax, Leader leader, Set<Employee> employeeSet, Set<Trip> tripSet) {
+        this.id = id;
+        this.name = name;
+        this.salaryMin = salaryMin;
+        this.salaryMax = salaryMax;
+        this.leader = leader;
+        this.employeeSet = employeeSet;
+        this.tripSet = tripSet;
+    }
 
     // @OneToOne: - Department-Leader
     @OneToOne(
@@ -64,7 +74,9 @@ public class Department {
             inverseJoinColumns = @JoinColumn(name = "trip_id"))
     private Set<Trip> tripSet;
 
+    public Department() {
 
+    }
 
 
     // equals & hashCode
@@ -81,4 +93,13 @@ public class Department {
     public int hashCode() {
         return Objects.hash(id);
     }
+
+
+    // ArgsConstructor
+    public Department(String name, Integer salaryMin, Integer salaryMax) {
+        this.name = name;
+        this.salaryMin = salaryMin;
+        this.salaryMax = salaryMax;
+    }
+
 }

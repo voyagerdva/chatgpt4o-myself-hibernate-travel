@@ -45,7 +45,7 @@ public class Employee {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Department department = (Department) o;
-        return Objects.equals(id, department.id);
+        return Objects.equals(id, department.getId());
     }
 
     @Override

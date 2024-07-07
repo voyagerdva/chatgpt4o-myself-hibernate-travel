@@ -23,6 +23,16 @@ public class Trip {
     private String date;
 
 
+    // @OneToOne: Trip-City
+    @OneToOne(
+            fetch = FetchType.LAZY,
+            cascade = CascadeType.ALL)
+    @JoinColumn(
+            name = "city_id",
+            nullable = false)
+    private City city;
+
+
 
     // @ManyToMany: Trip-Department
     @ManyToMany(
