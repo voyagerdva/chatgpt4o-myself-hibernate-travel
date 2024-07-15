@@ -1,0 +1,36 @@
+version: '3.5'
+services:
+  - pg_hibernate_exercise_1_5:
+      image: postgres:latest
+      environment:
+        - POSTGRES_PASSWORD=pass
+        - POSTGRES_USER=postgres
+      volumes:
+        # - ./pg_volume_hibernate:/var/lib/postgresql/data
+        # - ./pg_volume_spring:/var/lib/postgresql/data
+        - ./pg_volume_chatgpt4o_hibernate_exercise_1_5:/var/lib/postgresql/data
+      ports:
+        - "5432:5432"
+      container_name: pg_hibernate_exercise_1_5
+
+    pg_hibernate_exercise_3:
+      image: postgres:latest
+      environment:
+        - POSTGRES_PASSWORD=pass
+        - POSTGRES_USER=postgres
+      volumes:
+        - ./pg_volume_chatgpt4o_hibernate_exercise_3:/var/lib/postgresql/data
+      ports:
+        - "5433:5432"
+      container_name: pg_hibernate_exercise_3
+
+    pg_hibernate_myself_1_trips:
+      image: postgres:latest
+      environment:
+        - POSTGRES_PASSWORD=pass
+        - POSTGRES_USER=postgres
+      volumes:
+        - ./pg_volume_hibernate_myself_1_trips\:/var/lib/postgresql/data  
+      ports:
+        - "5434:5432"
+      container_name: pg_hibernate_myself_1_trips
