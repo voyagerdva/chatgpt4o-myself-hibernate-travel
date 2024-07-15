@@ -26,7 +26,6 @@ public class Employee {
     private Integer salary;
 
 
-
     // @ManyToOne: Employee-Department
     @ManyToOne(
             fetch = FetchType.LAZY,
@@ -37,21 +36,12 @@ public class Employee {
     private Department department;
 
 
+    // AllArgsConstructor - id
+    public Employee(String name, Integer salary) {
+        this.name = name;
+        this.salary = salary;
+    }
 
 
     // equals & hashCode
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Department department = (Department) o;
-        return Objects.equals(id, department.getId());
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(id);
-    }
-
-
 }

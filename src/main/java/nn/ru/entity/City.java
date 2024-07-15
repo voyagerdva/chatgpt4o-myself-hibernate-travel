@@ -9,6 +9,8 @@ import javax.persistence.*;
 @Entity
 @Table(name = "cities")
 @Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class City {
 
     @Id
@@ -18,4 +20,13 @@ public class City {
 
     @Column(name = "name")
     private String name;
+
+
+    // AllArgsConstructor - id
+    public City(String name) {
+        this.name = name;
+    }
+
+
+    // equals & hashCode
 }

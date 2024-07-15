@@ -23,6 +23,13 @@ public class Trip {
     private String date;
 
 
+    // AllArgsConstructor - id
+    public Trip(String date, City city, Set<Department> departmentSet) {
+        this.date = date;
+        this.city = city;
+        this.departmentSet = departmentSet;
+    }
+
     // @OneToOne: Trip-City
     @OneToOne(
             fetch = FetchType.LAZY,
@@ -44,4 +51,6 @@ public class Trip {
             inverseJoinColumns = @JoinColumn(name = "department_id"))
     private Set<Department> departmentSet;
 
+
+    // equals & hashCode
 }
