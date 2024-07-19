@@ -38,10 +38,7 @@ public class Department {
 
 
     // @OneToOne: - Department-Leader
-    @OneToOne(
-//            mappedBy = "department",
-            fetch = FetchType.LAZY,
-            cascade = CascadeType.ALL)
+    @OneToOne()
     @JoinColumn(name = "leader_id")
     private Leader leader;
 

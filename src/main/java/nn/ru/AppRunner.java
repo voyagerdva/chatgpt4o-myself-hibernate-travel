@@ -38,17 +38,30 @@ public class AppRunner {
 
         // Добавление начальника и работников в департамент:
         department.setLeader(leader);
-//        leader.setDepartment(department);
+        leader.setDepartment(department);
 
 //        department.addEmployeeToDepartment(employee1);
 //        department.addEmployeeToDepartment(employee2);
 
-//        session.save(leader);
-        session.save(department);
+        session.save(leader);
+//        session.save(department);
+
+//        Long leaderId = 34L;
+//        Leader leader1 = session.get(Leader.class, leaderId);
+//        System.out.println();
+//        System.out.println(leader1);
+
 
         session.getTransaction().commit();
         session.close();
+
+
+
+
+
         factory.close();
+
+
 
     }
 

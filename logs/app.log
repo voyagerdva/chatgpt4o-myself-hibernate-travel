@@ -1,0 +1,181 @@
+2024-07-19 10:26:53 INFO  Version - HHH000412: Hibernate ORM core version 5.6.9.Final
+2024-07-19 10:26:54 INFO  Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-07-19 10:26:54 WARN  ConnectionProviderInitiator - HHH000022: c3p0 properties were encountered, but the c3p0 provider class was not found on the classpath; these properties are going to be ignored.
+2024-07-19 10:26:54 WARN  pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2024-07-19 10:26:54 INFO  pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5434/db_items_orders]
+2024-07-19 10:26:54 INFO  pooling - HHH10001001: Connection properties: {password=****, user=postgres}
+2024-07-19 10:26:54 INFO  pooling - HHH10001003: Autocommit mode: false
+2024-07-19 10:26:54 INFO  DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2024-07-19 10:26:54 INFO  Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2024-07-19 10:26:55 INFO  access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@5ad1904f] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2024-07-19 10:26:55 INFO  JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-07-19 10:26:55 WARN  UnresolvedEntityInsertActions - HHH000437: Attempting to save one or more entities that have a non-nullable association with an unsaved transient entity. The unsaved transient entity must be saved in an operation prior to saving these dependent entities.
+	Unsaved transient entity: ([nn.ru.entity2.Order#<null>])
+	Dependent entities: ([[nn.ru.entity2.Item#<null>]])
+	Non-nullable association(s): ([nn.ru.entity2.Item.order])
+2024-07-19 10:27:39 INFO  Version - HHH000412: Hibernate ORM core version 5.6.9.Final
+2024-07-19 10:27:39 INFO  Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-07-19 10:27:40 WARN  ConnectionProviderInitiator - HHH000022: c3p0 properties were encountered, but the c3p0 provider class was not found on the classpath; these properties are going to be ignored.
+2024-07-19 10:27:40 WARN  pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2024-07-19 10:27:40 INFO  pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5434/db_items_orders]
+2024-07-19 10:27:40 INFO  pooling - HHH10001001: Connection properties: {password=****, user=postgres}
+2024-07-19 10:27:40 INFO  pooling - HHH10001003: Autocommit mode: false
+2024-07-19 10:27:40 INFO  DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2024-07-19 10:27:40 INFO  Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2024-07-19 10:27:40 INFO  access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@5ad1904f] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2024-07-19 10:27:40 INFO  JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-07-19 10:27:40 WARN  UnresolvedEntityInsertActions - HHH000437: Attempting to save one or more entities that have a non-nullable association with an unsaved transient entity. The unsaved transient entity must be saved in an operation prior to saving these dependent entities.
+	Unsaved transient entity: ([nn.ru.entity2.Company#<null>])
+	Dependent entities: ([[nn.ru.entity2.Order#<null>]])
+	Non-nullable association(s): ([nn.ru.entity2.Order.company])
+2024-07-19 10:28:04 INFO  Version - HHH000412: Hibernate ORM core version 5.6.9.Final
+2024-07-19 10:28:04 INFO  Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-07-19 10:28:05 WARN  ConnectionProviderInitiator - HHH000022: c3p0 properties were encountered, but the c3p0 provider class was not found on the classpath; these properties are going to be ignored.
+2024-07-19 10:28:05 WARN  pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2024-07-19 10:28:05 INFO  pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5434/db_items_orders]
+2024-07-19 10:28:05 INFO  pooling - HHH10001001: Connection properties: {password=****, user=postgres}
+2024-07-19 10:28:05 INFO  pooling - HHH10001003: Autocommit mode: false
+2024-07-19 10:28:05 INFO  DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2024-07-19 10:28:05 INFO  Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2024-07-19 10:28:06 INFO  access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@67b355c8] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2024-07-19 10:28:06 INFO  JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-07-19 10:28:06 DEBUG SQL - 
+    /* insert nn.ru.entity2.Company
+        */ insert 
+        into
+            companies
+            default 
+        values
+            
+2024-07-19 10:28:06 INFO  pooling - HHH10001008: Cleaning up connection pool [jdbc:postgresql://localhost:5434/db_items_orders]
+2024-07-19 10:28:47 INFO  Version - HHH000412: Hibernate ORM core version 5.6.9.Final
+2024-07-19 10:28:48 INFO  Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-07-19 10:28:48 WARN  ConnectionProviderInitiator - HHH000022: c3p0 properties were encountered, but the c3p0 provider class was not found on the classpath; these properties are going to be ignored.
+2024-07-19 10:28:48 WARN  pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2024-07-19 10:28:48 INFO  pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5434/db_items_orders]
+2024-07-19 10:28:48 INFO  pooling - HHH10001001: Connection properties: {password=****, user=postgres}
+2024-07-19 10:28:48 INFO  pooling - HHH10001003: Autocommit mode: false
+2024-07-19 10:28:48 INFO  DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2024-07-19 10:28:48 INFO  Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2024-07-19 10:28:48 INFO  access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@4b432e53] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2024-07-19 10:28:49 INFO  JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-07-19 10:28:49 DEBUG SQL - 
+    /* insert nn.ru.entity2.Company
+        */ insert 
+        into
+            companies
+            default 
+        values
+            
+2024-07-19 10:28:49 INFO  pooling - HHH10001008: Cleaning up connection pool [jdbc:postgresql://localhost:5434/db_items_orders]
+2024-07-19 10:29:22 INFO  Version - HHH000412: Hibernate ORM core version 5.6.9.Final
+2024-07-19 10:29:23 INFO  Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-07-19 10:29:23 WARN  ConnectionProviderInitiator - HHH000022: c3p0 properties were encountered, but the c3p0 provider class was not found on the classpath; these properties are going to be ignored.
+2024-07-19 10:29:23 WARN  pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2024-07-19 10:29:23 INFO  pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5434/db_items_orders]
+2024-07-19 10:29:23 INFO  pooling - HHH10001001: Connection properties: {password=****, user=postgres}
+2024-07-19 10:29:23 INFO  pooling - HHH10001003: Autocommit mode: false
+2024-07-19 10:29:23 INFO  DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2024-07-19 10:29:23 INFO  Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2024-07-19 10:29:24 INFO  access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@2d0b05] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2024-07-19 10:29:24 INFO  JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-07-19 10:29:24 DEBUG SQL - 
+    /* insert nn.ru.entity2.Company
+        */ insert 
+        into
+            companies
+            default 
+        values
+            
+2024-07-19 10:29:24 INFO  pooling - HHH10001008: Cleaning up connection pool [jdbc:postgresql://localhost:5434/db_items_orders]
+2024-07-19 10:30:52 INFO  Version - HHH000412: Hibernate ORM core version 5.6.9.Final
+2024-07-19 10:30:52 INFO  Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-07-19 10:30:52 WARN  ConnectionProviderInitiator - HHH000022: c3p0 properties were encountered, but the c3p0 provider class was not found on the classpath; these properties are going to be ignored.
+2024-07-19 10:30:52 WARN  pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2024-07-19 10:30:52 INFO  pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5434/db_items_orders]
+2024-07-19 10:30:52 INFO  pooling - HHH10001001: Connection properties: {password=****, user=postgres}
+2024-07-19 10:30:52 INFO  pooling - HHH10001003: Autocommit mode: false
+2024-07-19 10:30:52 INFO  DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2024-07-19 10:30:52 INFO  Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2024-07-19 10:30:53 INFO  access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@3cd26422] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2024-07-19 10:30:53 INFO  JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-07-19 10:30:53 DEBUG SQL - 
+    /* insert nn.ru.entity2.Company
+        */ insert 
+        into
+            companies
+            default 
+        values
+            
+2024-07-19 10:30:53 WARN  UnresolvedEntityInsertActions - HHH000437: Attempting to save one or more entities that have a non-nullable association with an unsaved transient entity. The unsaved transient entity must be saved in an operation prior to saving these dependent entities.
+	Unsaved transient entity: ([nn.ru.entity2.Order#<null>])
+	Dependent entities: ([[nn.ru.entity2.Item#<null>]])
+	Non-nullable association(s): ([nn.ru.entity2.Item.order])
+2024-07-19 10:31:28 INFO  Version - HHH000412: Hibernate ORM core version 5.6.9.Final
+2024-07-19 10:31:28 INFO  Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-07-19 10:31:28 WARN  ConnectionProviderInitiator - HHH000022: c3p0 properties were encountered, but the c3p0 provider class was not found on the classpath; these properties are going to be ignored.
+2024-07-19 10:31:28 WARN  pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2024-07-19 10:31:28 INFO  pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5434/db_items_orders]
+2024-07-19 10:31:28 INFO  pooling - HHH10001001: Connection properties: {password=****, user=postgres}
+2024-07-19 10:31:28 INFO  pooling - HHH10001003: Autocommit mode: false
+2024-07-19 10:31:28 INFO  DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2024-07-19 10:31:29 INFO  Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2024-07-19 10:31:29 INFO  access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@2ed71727] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2024-07-19 10:31:29 INFO  JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-07-19 10:31:30 DEBUG SQL - 
+    /* insert nn.ru.entity2.Company
+        */ insert 
+        into
+            companies
+            default 
+        values
+            
+2024-07-19 10:31:30 WARN  UnresolvedEntityInsertActions - HHH000437: Attempting to save one or more entities that have a non-nullable association with an unsaved transient entity. The unsaved transient entity must be saved in an operation prior to saving these dependent entities.
+	Unsaved transient entity: ([nn.ru.entity2.Order#<null>])
+	Dependent entities: ([[nn.ru.entity2.Item#<null>]])
+	Non-nullable association(s): ([nn.ru.entity2.Item.order])
+2024-07-19 10:31:35 INFO  Version - HHH000412: Hibernate ORM core version 5.6.9.Final
+2024-07-19 10:31:36 INFO  Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-07-19 10:31:36 WARN  ConnectionProviderInitiator - HHH000022: c3p0 properties were encountered, but the c3p0 provider class was not found on the classpath; these properties are going to be ignored.
+2024-07-19 10:31:36 WARN  pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2024-07-19 10:31:36 INFO  pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5434/db_items_orders]
+2024-07-19 10:31:36 INFO  pooling - HHH10001001: Connection properties: {password=****, user=postgres}
+2024-07-19 10:31:36 INFO  pooling - HHH10001003: Autocommit mode: false
+2024-07-19 10:31:36 INFO  DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2024-07-19 10:31:36 INFO  Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2024-07-19 10:31:37 INFO  access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@2eda072] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2024-07-19 10:31:37 INFO  JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-07-19 10:31:37 WARN  UnresolvedEntityInsertActions - HHH000437: Attempting to save one or more entities that have a non-nullable association with an unsaved transient entity. The unsaved transient entity must be saved in an operation prior to saving these dependent entities.
+	Unsaved transient entity: ([nn.ru.entity2.Order#<null>])
+	Dependent entities: ([[nn.ru.entity2.Item#<null>]])
+	Non-nullable association(s): ([nn.ru.entity2.Item.order])
+2024-07-19 10:31:54 INFO  Version - HHH000412: Hibernate ORM core version 5.6.9.Final
+2024-07-19 10:31:54 INFO  Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-07-19 10:31:55 WARN  ConnectionProviderInitiator - HHH000022: c3p0 properties were encountered, but the c3p0 provider class was not found on the classpath; these properties are going to be ignored.
+2024-07-19 10:31:55 WARN  pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2024-07-19 10:31:55 INFO  pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5434/db_items_orders]
+2024-07-19 10:31:55 INFO  pooling - HHH10001001: Connection properties: {password=****, user=postgres}
+2024-07-19 10:31:55 INFO  pooling - HHH10001003: Autocommit mode: false
+2024-07-19 10:31:55 INFO  DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2024-07-19 10:31:55 INFO  Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2024-07-19 10:31:55 INFO  access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@3135bf25] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2024-07-19 10:31:56 INFO  JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-07-19 10:31:56 WARN  UnresolvedEntityInsertActions - HHH000437: Attempting to save one or more entities that have a non-nullable association with an unsaved transient entity. The unsaved transient entity must be saved in an operation prior to saving these dependent entities.
+	Unsaved transient entity: ([nn.ru.entity2.Company#<null>])
+	Dependent entities: ([[nn.ru.entity2.Order#<null>]])
+	Non-nullable association(s): ([nn.ru.entity2.Order.company])
+2024-07-19 10:32:12 INFO  Version - HHH000412: Hibernate ORM core version 5.6.9.Final
+2024-07-19 10:32:12 INFO  Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-07-19 10:32:12 WARN  ConnectionProviderInitiator - HHH000022: c3p0 properties were encountered, but the c3p0 provider class was not found on the classpath; these properties are going to be ignored.
+2024-07-19 10:32:12 WARN  pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2024-07-19 10:32:12 INFO  pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5434/db_items_orders]
+2024-07-19 10:32:12 INFO  pooling - HHH10001001: Connection properties: {password=****, user=postgres}
+2024-07-19 10:32:12 INFO  pooling - HHH10001003: Autocommit mode: false
+2024-07-19 10:32:12 INFO  DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2024-07-19 10:32:13 INFO  Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2024-07-19 10:32:13 INFO  access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@22ad1bae] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2024-07-19 10:32:13 INFO  JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-07-19 10:32:13 WARN  UnresolvedEntityInsertActions - HHH000437: Attempting to save one or more entities that have a non-nullable association with an unsaved transient entity. The unsaved transient entity must be saved in an operation prior to saving these dependent entities.
+	Unsaved transient entity: ([nn.ru.entity2.Company#<null>])
+	Dependent entities: ([[nn.ru.entity2.Order#<null>]])
+	Non-nullable association(s): ([nn.ru.entity2.Order.company])

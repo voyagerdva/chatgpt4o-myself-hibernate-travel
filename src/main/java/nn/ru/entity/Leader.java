@@ -27,18 +27,16 @@ public class Leader {
 
 
     // @OneToOne: Leader-Department
-
-    @OneToOne(
-            mappedBy = "leader",
-            cascade = CascadeType.ALL)
-//    @JoinColumn( name = "department_id")
+    @OneToOne()
+    @JoinColumn( name = "department_id")
     private Department department;
 
     public void setDepartment(Department department) {
         this.department = department;
-        if (department != null && department.getLeader() != this) {
-            department.setLeader(this);
-        }
+        department.setLeader(this);
+//        if (department != null && department.getLeader() != this) {
+
+//        }
     }
 
 
