@@ -7,34 +7,43 @@ import lombok.NoArgsConstructor;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "items")
+@Table(name = "groups")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class Item {
+public class Group {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private Long id;
 
+    // @OneToOne: Group-Item обратная
+//    @OneToOne(
+//            fetch = FetchType.LAZY)
+//    private Item item;
 
-    // @OneToOne: Item-Order - прямая
+    // @OneToOne: Group-Company - прямая
 //    @OneToOne(
 //            fetch = FetchType.LAZY)
 //    @JoinColumn(
-//            name = "group_id",
+//            name = "company_id",
 //            unique = true,
 //            nullable = false)
-//    private Group group;
-
+//    private Company company;
 
     // equals & hashCode
 //    @Override
 //    public String toString() {
-//        return "Item{" +
+//        return "Group{" +
 //                "id=" + id +
-//                ", group=" + (group != null ? "Order{id=" + group.getId() + "}" : "null") +
+//                ", item=" + (item != null ? "Item{id=" + item.getId() + "}" : "null") +
+//                ", company=" + (company != null ? "Company{id=" + company.getId() + "}" : "null") +
 //                '}';
 //    }
+
+
+
+
+
 }
