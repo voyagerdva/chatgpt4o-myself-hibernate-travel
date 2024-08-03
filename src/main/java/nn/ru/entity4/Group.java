@@ -1,4 +1,4 @@
-package nn.ru.entity2;
+package nn.ru.entity4;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -17,6 +17,13 @@ public class Group {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private Long id;
+
+    @OneToOne(
+            fetch = FetchType.LAZY)
+    @JoinColumn(
+            name = "item_id")
+    private Item item;
+
 
     // @OneToOne: Group-Item обратная
 //    @OneToOne(

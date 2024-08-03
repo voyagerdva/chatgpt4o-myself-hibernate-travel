@@ -29,9 +29,9 @@
         <property name="hibernate.c3p0.idle_test_period">3000</property>
 
         <!-- Annotated entity classes -->
-        <mapping class="nn.ru.entity2.Group"/>
-        <mapping class="nn.ru.entity2.Item"/>
-        <mapping class="nn.ru.entity2.Company"/>
+        <mapping class="nn.ru.entity4.Group"/>
+        <mapping class="nn.ru.entity4.Item"/>
+        <mapping class="nn.ru.entity4.Company"/>
 <!--        <mapping class="nn.ru.entity.Department"/>-->
 <!--        <mapping class="nn.ru.entity.Employee"/>-->
 <!--        <mapping class="nn.ru.entity.Leader"/>-->

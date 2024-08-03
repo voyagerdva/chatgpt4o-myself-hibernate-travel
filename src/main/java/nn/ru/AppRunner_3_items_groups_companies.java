@@ -1,8 +1,8 @@
 package nn.ru;
 
-import nn.ru.entity2.Item;
-import nn.ru.entity2.Group;
-import nn.ru.entity2.Company;
+import nn.ru.entity4.Item;
+import nn.ru.entity4.Group;
+import nn.ru.entity4.Company;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.hibernate.Session;

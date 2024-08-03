@@ -19,22 +19,28 @@ public class Item {
     private Long id;
 
 
-    // @OneToOne: Item-Order - прямая
-//    @OneToOne(
-//            fetch = FetchType.LAZY)
-//    @JoinColumn(
-//            name = "group_id",
-//            unique = true,
-//            nullable = false)
-//    private Group group;
+    // @OneToOne: Leader-Department
+    @OneToOne(
+            fetch = FetchType.LAZY)
+    @JoinColumn(
+            name = "order_id",
+            unique = true,
+            nullable = false)
+    private Order order;
 
+
+//    private Order order1;
+
+
+    // AllArgsConstructor - id
 
     // equals & hashCode
-//    @Override
-//    public String toString() {
-//        return "Item{" +
-//                "id=" + id +
-//                ", group=" + (group != null ? "Order{id=" + group.getId() + "}" : "null") +
-//                '}';
-//    }
+
+    @Override
+    public String toString() {
+        return "Item{" +
+                "id=" + id +
+                ", order=" + (order != null ? "Order{id=" + order.getId() + "}" : "null") +
+                '}';
+    }
 }

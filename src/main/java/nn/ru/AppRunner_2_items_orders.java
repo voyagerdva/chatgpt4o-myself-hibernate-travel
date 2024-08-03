@@ -1,7 +1,7 @@
 package nn.ru;
 
-import nn.ru.entity1.Item;
-import nn.ru.entity1.Order;
+import nn.ru.entity2.Item;
+import nn.ru.entity2.Order;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.hibernate.Session;
@@ -20,13 +20,15 @@ public class AppRunner_2_items_orders {
         configuration.addAnnotatedClass(Item.class);
 
         SessionFactory factory = configuration.buildSessionFactory();
+
+// === SESSCION 1: ===============================================================
+
+        // ОТКРЫВАЕМ СЕССИЮ:
         Session session = factory.openSession();
         session.beginTransaction();
 
-        // инициализация данных Order
+        // РАБОТА С ДАННЫМИ:
         Order order1 = new Order();
-
-        // инициализация данных Item
         Item item1 = new Item();
 
         item1.setOrder(order1);
@@ -34,9 +36,13 @@ public class AppRunner_2_items_orders {
         session.save(order1);
         session.save(item1);
 
+        // ЗАКРЫВАЕМ СЕССИЮ:
         session.getTransaction().commit();
         session.close();
-// ==================================================================
+
+// === SESSCION 2: ===============================================================
+
+        // ОТКРЫВАЕМ СЕССИЮ:
         session = factory.openSession();
         session.beginTransaction();
 
@@ -54,11 +60,13 @@ public class AppRunner_2_items_orders {
 ////        item.setOrder(order);
 ////        session.save(item);
 //
+
+        // ЗАКРЫВАЕМ СЕССИЮ:
         session.getTransaction().commit();
         session.close();
 
 
-        // ==================================================================
+// ===  SESSCION 3: ===============================================================
 //        session = factory.openSession();
 //        session.beginTransaction();
 //
@@ -77,6 +85,7 @@ public class AppRunner_2_items_orders {
 ////        session.delete(order);
 //
 //
+        // ЗАКРЫВАЕМ СЕССИЮ:
 //        session.getTransaction().commit();
 //        session.close();
 
