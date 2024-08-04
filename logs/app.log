@@ -1904,3 +1904,2462 @@ java.lang.IllegalStateException: Cannot get a connection as the driver manager i
         company0_.id=?
 2024-08-02 10:05:54 TRACE BasicBinder - binding parameter [1] as [BIGINT] - [4]
 2024-08-02 10:05:54 INFO  pooling - HHH10001008: Cleaning up connection pool [jdbc:postgresql://localhost:5434/db_items_orders]
+2024-08-03 10:44:57 INFO  Version - HHH000412: Hibernate ORM core version 5.6.9.Final
+2024-08-03 10:44:57 INFO  Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-08-03 10:44:57 WARN  ConnectionProviderInitiator - HHH000022: c3p0 properties were encountered, but the c3p0 provider class was not found on the classpath; these properties are going to be ignored.
+2024-08-03 10:44:57 WARN  pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2024-08-03 10:44:57 INFO  pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5434/db_items_orders]
+2024-08-03 10:44:57 INFO  pooling - HHH10001001: Connection properties: {password=****, user=postgres}
+2024-08-03 10:44:57 INFO  pooling - HHH10001003: Autocommit mode: false
+2024-08-03 10:44:57 INFO  DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2024-08-03 10:44:58 INFO  Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2024-08-03 10:44:58 INFO  access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@4cc12db2] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2024-08-03 10:44:58 DEBUG SQL - 
+    
+    alter table if exists groups 
+       add column item_id int8
+2024-08-03 10:44:58 DEBUG SQL - 
+    
+    alter table if exists groups 
+       add constraint FK7w9p1vnot7v1j3qiwfekuhpnr 
+       foreign key (item_id) 
+       references items
+2024-08-03 10:44:59 INFO  JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-08-03 10:44:59 DEBUG SQL - 
+    /* insert nn.ru.entity4.Group
+        */ insert 
+        into
+            groups
+            (item_id) 
+        values
+            (?)
+2024-08-03 10:44:59 TRACE BasicBinder - binding parameter [1] as [BIGINT] - [null]
+2024-08-03 10:45:48 INFO  Version - HHH000412: Hibernate ORM core version 5.6.9.Final
+2024-08-03 10:45:49 INFO  Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-08-03 10:45:49 WARN  ConnectionProviderInitiator - HHH000022: c3p0 properties were encountered, but the c3p0 provider class was not found on the classpath; these properties are going to be ignored.
+2024-08-03 10:45:49 WARN  pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2024-08-03 10:45:49 INFO  pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5434/db_items_orders]
+2024-08-03 10:45:49 INFO  pooling - HHH10001001: Connection properties: {password=****, user=postgres}
+2024-08-03 10:45:49 INFO  pooling - HHH10001003: Autocommit mode: false
+2024-08-03 10:45:49 INFO  DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2024-08-03 10:45:49 INFO  Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2024-08-03 10:45:50 INFO  access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@4cc12db2] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2024-08-03 10:45:50 INFO  JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-08-03 10:45:50 DEBUG SQL - 
+    /* insert nn.ru.entity4.Item
+        */ insert 
+        into
+            items
+            default 
+        values
+            
+2024-08-03 10:45:50 INFO  pooling - HHH10001008: Cleaning up connection pool [jdbc:postgresql://localhost:5434/db_items_orders]
+2024-08-03 10:46:24 INFO  Version - HHH000412: Hibernate ORM core version 5.6.9.Final
+2024-08-03 10:46:24 INFO  Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-08-03 10:46:24 WARN  ConnectionProviderInitiator - HHH000022: c3p0 properties were encountered, but the c3p0 provider class was not found on the classpath; these properties are going to be ignored.
+2024-08-03 10:46:24 WARN  pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2024-08-03 10:46:24 INFO  pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5434/db_items_orders]
+2024-08-03 10:46:24 INFO  pooling - HHH10001001: Connection properties: {password=****, user=postgres}
+2024-08-03 10:46:24 INFO  pooling - HHH10001003: Autocommit mode: false
+2024-08-03 10:46:24 INFO  DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2024-08-03 10:46:25 INFO  Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2024-08-03 10:46:25 INFO  access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@4cc12db2] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2024-08-03 10:46:25 INFO  JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-08-03 10:46:25 DEBUG SQL - 
+    /* insert nn.ru.entity4.Item
+        */ insert 
+        into
+            items
+            default 
+        values
+            
+2024-08-03 10:46:25 DEBUG SQL - 
+    /* insert nn.ru.entity4.Group
+        */ insert 
+        into
+            groups
+            (item_id) 
+        values
+            (?)
+2024-08-03 10:46:25 TRACE BasicBinder - binding parameter [1] as [BIGINT] - [6]
+2024-08-03 10:46:25 INFO  pooling - HHH10001008: Cleaning up connection pool [jdbc:postgresql://localhost:5434/db_items_orders]
+2024-08-03 10:48:01 INFO  Version - HHH000412: Hibernate ORM core version 5.6.9.Final
+2024-08-03 10:48:02 INFO  Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-08-03 10:48:02 WARN  ConnectionProviderInitiator - HHH000022: c3p0 properties were encountered, but the c3p0 provider class was not found on the classpath; these properties are going to be ignored.
+2024-08-03 10:48:02 WARN  pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2024-08-03 10:48:02 INFO  pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5434/db_items_orders]
+2024-08-03 10:48:02 INFO  pooling - HHH10001001: Connection properties: {password=****, user=postgres}
+2024-08-03 10:48:02 INFO  pooling - HHH10001003: Autocommit mode: false
+2024-08-03 10:48:02 INFO  DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2024-08-03 10:48:02 INFO  Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2024-08-03 10:48:03 INFO  access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@5ea7bc4] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2024-08-03 10:48:03 INFO  JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-08-03 10:48:45 DEBUG SQL - 
+    /* insert nn.ru.entity4.Item
+        */ insert 
+        into
+            items
+            default 
+        values
+            
+2024-08-03 10:48:52 DEBUG SQL - 
+    /* insert nn.ru.entity4.Group
+        */ insert 
+        into
+            groups
+            (item_id) 
+        values
+            (?)
+2024-08-03 10:48:52 TRACE BasicBinder - binding parameter [1] as [BIGINT] - [7]
+2024-08-03 10:49:51 INFO  Version - HHH000412: Hibernate ORM core version 5.6.9.Final
+2024-08-03 10:49:52 INFO  Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-08-03 10:49:52 WARN  ConnectionProviderInitiator - HHH000022: c3p0 properties were encountered, but the c3p0 provider class was not found on the classpath; these properties are going to be ignored.
+2024-08-03 10:49:52 WARN  pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2024-08-03 10:49:52 INFO  pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5434/db_items_orders]
+2024-08-03 10:49:52 INFO  pooling - HHH10001001: Connection properties: {password=****, user=postgres}
+2024-08-03 10:49:52 INFO  pooling - HHH10001003: Autocommit mode: false
+2024-08-03 10:49:52 INFO  DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2024-08-03 10:49:52 INFO  Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2024-08-03 10:49:53 INFO  access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@5ea7bc4] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2024-08-03 10:49:53 INFO  JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-08-03 10:50:05 DEBUG SQL - 
+    /* insert nn.ru.entity4.Item
+        */ insert 
+        into
+            items
+            default 
+        values
+            
+2024-08-03 10:50:07 DEBUG SQL - 
+    /* insert nn.ru.entity4.Group
+        */ insert 
+        into
+            groups
+            (item_id) 
+        values
+            (?)
+2024-08-03 10:50:07 TRACE BasicBinder - binding parameter [1] as [BIGINT] - [8]
+2024-08-03 10:51:00 INFO  Version - HHH000412: Hibernate ORM core version 5.6.9.Final
+2024-08-03 10:51:01 INFO  Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-08-03 10:51:01 WARN  ConnectionProviderInitiator - HHH000022: c3p0 properties were encountered, but the c3p0 provider class was not found on the classpath; these properties are going to be ignored.
+2024-08-03 10:51:01 WARN  pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2024-08-03 10:51:01 INFO  pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5434/db_items_orders]
+2024-08-03 10:51:01 INFO  pooling - HHH10001001: Connection properties: {password=****, user=postgres}
+2024-08-03 10:51:01 INFO  pooling - HHH10001003: Autocommit mode: false
+2024-08-03 10:51:01 INFO  DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2024-08-03 10:51:01 INFO  Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2024-08-03 10:51:02 INFO  access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@5ea7bc4] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2024-08-03 10:51:02 INFO  JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-08-03 10:51:13 DEBUG SQL - 
+    /* insert nn.ru.entity4.Item
+        */ insert 
+        into
+            items
+            default 
+        values
+            
+2024-08-03 10:51:14 DEBUG SQL - 
+    /* insert nn.ru.entity4.Group
+        */ insert 
+        into
+            groups
+            (item_id) 
+        values
+            (?)
+2024-08-03 10:51:14 TRACE BasicBinder - binding parameter [1] as [BIGINT] - [9]
+2024-08-03 10:51:29 INFO  pooling - HHH10001008: Cleaning up connection pool [jdbc:postgresql://localhost:5434/db_items_orders]
+2024-08-03 10:55:37 INFO  Version - HHH000412: Hibernate ORM core version 5.6.9.Final
+2024-08-03 10:55:38 INFO  Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-08-03 10:55:38 WARN  ConnectionProviderInitiator - HHH000022: c3p0 properties were encountered, but the c3p0 provider class was not found on the classpath; these properties are going to be ignored.
+2024-08-03 10:55:38 WARN  pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2024-08-03 10:55:38 INFO  pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5434/db_items_orders]
+2024-08-03 10:55:38 INFO  pooling - HHH10001001: Connection properties: {password=****, user=postgres}
+2024-08-03 10:55:38 INFO  pooling - HHH10001003: Autocommit mode: false
+2024-08-03 10:55:38 INFO  DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2024-08-03 10:55:38 INFO  Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2024-08-03 10:55:39 INFO  access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@39c87b42] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2024-08-03 10:55:39 DEBUG SQL - 
+    
+    alter table if exists companies 
+       add column group_id int8
+2024-08-03 10:55:39 DEBUG SQL - 
+    
+    alter table if exists companies 
+       add constraint FKf9iqcowinqk3pl4yeukx88vq7 
+       foreign key (group_id) 
+       references groups
+2024-08-03 10:55:39 INFO  JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-08-03 10:56:09 DEBUG SQL - 
+    /* insert nn.ru.entity4.Item
+        */ insert 
+        into
+            items
+            default 
+        values
+            
+2024-08-03 10:56:17 DEBUG SQL - 
+    /* insert nn.ru.entity4.Group
+        */ insert 
+        into
+            groups
+            (item_id) 
+        values
+            (?)
+2024-08-03 10:56:17 TRACE BasicBinder - binding parameter [1] as [BIGINT] - [10]
+2024-08-03 10:56:21 DEBUG SQL - 
+    /* insert nn.ru.entity4.Company
+        */ insert 
+        into
+            companies
+            (group_id) 
+        values
+            (?)
+2024-08-03 10:56:21 TRACE BasicBinder - binding parameter [1] as [BIGINT] - [10]
+2024-08-03 10:58:43 INFO  pooling - HHH10001008: Cleaning up connection pool [jdbc:postgresql://localhost:5434/db_items_orders]
+2024-08-03 10:59:25 INFO  Version - HHH000412: Hibernate ORM core version 5.6.9.Final
+2024-08-03 10:59:25 INFO  Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-08-03 10:59:25 WARN  ConnectionProviderInitiator - HHH000022: c3p0 properties were encountered, but the c3p0 provider class was not found on the classpath; these properties are going to be ignored.
+2024-08-03 10:59:25 WARN  pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2024-08-03 10:59:25 INFO  pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5434/db_items_orders]
+2024-08-03 10:59:25 INFO  pooling - HHH10001001: Connection properties: {password=****, user=postgres}
+2024-08-03 10:59:25 INFO  pooling - HHH10001003: Autocommit mode: false
+2024-08-03 10:59:25 INFO  DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2024-08-03 10:59:25 INFO  Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2024-08-03 10:59:26 INFO  access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@77083e41] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2024-08-03 10:59:26 INFO  JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-08-03 10:59:38 DEBUG SQL - 
+    /* insert nn.ru.entity4.Company
+        */ insert 
+        into
+            companies
+            (group_id) 
+        values
+            (?)
+2024-08-03 10:59:38 TRACE BasicBinder - binding parameter [1] as [BIGINT] - [null]
+2024-08-03 11:00:35 INFO  Version - HHH000412: Hibernate ORM core version 5.6.9.Final
+2024-08-03 11:00:36 INFO  Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-08-03 11:00:36 WARN  ConnectionProviderInitiator - HHH000022: c3p0 properties were encountered, but the c3p0 provider class was not found on the classpath; these properties are going to be ignored.
+2024-08-03 11:00:36 WARN  pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2024-08-03 11:00:36 INFO  pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5434/db_items_orders]
+2024-08-03 11:00:36 INFO  pooling - HHH10001001: Connection properties: {password=****, user=postgres}
+2024-08-03 11:00:36 INFO  pooling - HHH10001003: Autocommit mode: false
+2024-08-03 11:00:36 INFO  DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2024-08-03 11:00:36 INFO  Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2024-08-03 11:00:37 INFO  access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@2d130ac4] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2024-08-03 11:00:37 INFO  JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-08-03 11:00:45 DEBUG SQL - 
+    /* insert nn.ru.entity4.Company
+        */ insert 
+        into
+            companies
+            (group_id) 
+        values
+            (?)
+2024-08-03 11:00:45 TRACE BasicBinder - binding parameter [1] as [BIGINT] - [null]
+2024-08-03 11:02:15 INFO  Version - HHH000412: Hibernate ORM core version 5.6.9.Final
+2024-08-03 11:02:16 INFO  Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-08-03 11:02:16 WARN  ConnectionProviderInitiator - HHH000022: c3p0 properties were encountered, but the c3p0 provider class was not found on the classpath; these properties are going to be ignored.
+2024-08-03 11:02:16 WARN  pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2024-08-03 11:02:16 INFO  pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5434/db_items_orders]
+2024-08-03 11:02:16 INFO  pooling - HHH10001001: Connection properties: {password=****, user=postgres}
+2024-08-03 11:02:16 INFO  pooling - HHH10001003: Autocommit mode: false
+2024-08-03 11:02:16 INFO  DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2024-08-03 11:02:16 INFO  Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2024-08-03 11:02:17 INFO  access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@2d130ac4] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2024-08-03 11:02:17 INFO  JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-08-03 11:02:29 DEBUG SQL - 
+    /* insert nn.ru.entity4.Item
+        */ insert 
+        into
+            items
+            default 
+        values
+            
+2024-08-03 11:02:44 DEBUG SQL - 
+    /* insert nn.ru.entity4.Group
+        */ insert 
+        into
+            groups
+            (item_id) 
+        values
+            (?)
+2024-08-03 11:02:44 TRACE BasicBinder - binding parameter [1] as [BIGINT] - [11]
+2024-08-03 11:02:47 DEBUG SQL - 
+    /* insert nn.ru.entity4.Company
+        */ insert 
+        into
+            companies
+            (group_id) 
+        values
+            (?)
+2024-08-03 11:02:47 TRACE BasicBinder - binding parameter [1] as [BIGINT] - [11]
+2024-08-03 11:03:18 INFO  pooling - HHH10001008: Cleaning up connection pool [jdbc:postgresql://localhost:5434/db_items_orders]
+2024-08-03 11:22:17 INFO  Version - HHH000412: Hibernate ORM core version 5.6.9.Final
+2024-08-03 11:22:18 INFO  Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-08-03 11:22:18 WARN  ConnectionProviderInitiator - HHH000022: c3p0 properties were encountered, but the c3p0 provider class was not found on the classpath; these properties are going to be ignored.
+2024-08-03 11:22:18 WARN  pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2024-08-03 11:22:18 INFO  pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5434/db_items_orders]
+2024-08-03 11:22:18 INFO  pooling - HHH10001001: Connection properties: {password=****, user=postgres}
+2024-08-03 11:22:18 INFO  pooling - HHH10001003: Autocommit mode: false
+2024-08-03 11:22:18 INFO  DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2024-08-03 11:22:18 INFO  Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2024-08-03 11:22:19 INFO  access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@194012a2] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2024-08-03 11:22:19 INFO  JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-08-03 11:22:19 DEBUG SQL - 
+    /* insert nn.ru.entity4.Item
+        */ insert 
+        into
+            items
+            default 
+        values
+            
+2024-08-03 11:22:19 DEBUG SQL - 
+    /* insert nn.ru.entity4.Group
+        */ insert 
+        into
+            groups
+            (item_id) 
+        values
+            (?)
+2024-08-03 11:22:19 TRACE BasicBinder - binding parameter [1] as [BIGINT] - [12]
+2024-08-03 11:22:19 DEBUG SQL - 
+    /* insert nn.ru.entity4.Company
+        */ insert 
+        into
+            companies
+            (group_id) 
+        values
+            (?)
+2024-08-03 11:22:19 TRACE BasicBinder - binding parameter [1] as [BIGINT] - [12]
+2024-08-03 11:22:19 INFO  pooling - HHH10001008: Cleaning up connection pool [jdbc:postgresql://localhost:5434/db_items_orders]
+2024-08-03 11:22:45 INFO  Version - HHH000412: Hibernate ORM core version 5.6.9.Final
+2024-08-03 11:22:45 INFO  Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-08-03 11:22:46 WARN  ConnectionProviderInitiator - HHH000022: c3p0 properties were encountered, but the c3p0 provider class was not found on the classpath; these properties are going to be ignored.
+2024-08-03 11:22:46 WARN  pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2024-08-03 11:22:46 INFO  pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5434/db_items_orders]
+2024-08-03 11:22:46 INFO  pooling - HHH10001001: Connection properties: {password=****, user=postgres}
+2024-08-03 11:22:46 INFO  pooling - HHH10001003: Autocommit mode: false
+2024-08-03 11:22:46 INFO  DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2024-08-03 11:22:46 INFO  Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2024-08-03 11:22:46 INFO  access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@194012a2] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2024-08-03 11:22:46 INFO  JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-08-03 11:22:47 DEBUG SQL - 
+    select
+        item0_.id as id1_2_0_ 
+    from
+        items item0_ 
+    where
+        item0_.id=?
+2024-08-03 11:22:47 TRACE BasicBinder - binding parameter [1] as [BIGINT] - [8]
+2024-08-03 11:22:47 DEBUG SQL - 
+    select
+        group0_.id as id1_1_0_,
+        group0_.item_id as item_id2_1_0_,
+        item1_.id as id1_2_1_ 
+    from
+        groups group0_ 
+    left outer join
+        items item1_ 
+            on group0_.item_id=item1_.id 
+    where
+        group0_.id=?
+2024-08-03 11:22:47 TRACE BasicBinder - binding parameter [1] as [BIGINT] - [6]
+2024-08-03 11:22:47 DEBUG SQL - 
+    select
+        company0_.id as id1_0_0_,
+        company0_.group_id as group_id2_0_0_,
+        group1_.id as id1_1_1_,
+        group1_.item_id as item_id2_1_1_,
+        item2_.id as id1_2_2_ 
+    from
+        companies company0_ 
+    left outer join
+        groups group1_ 
+            on company0_.group_id=group1_.id 
+    left outer join
+        items item2_ 
+            on group1_.item_id=item2_.id 
+    where
+        company0_.id=?
+2024-08-03 11:22:47 TRACE BasicBinder - binding parameter [1] as [BIGINT] - [11]
+2024-08-03 11:23:45 DEBUG SQL - 
+    /* insert nn.ru.entity4.Item
+        */ insert 
+        into
+            items
+            default 
+        values
+            
+2024-08-03 11:24:15 DEBUG SQL - 
+    /* insert nn.ru.entity4.Group
+        */ insert 
+        into
+            groups
+            (item_id) 
+        values
+            (?)
+2024-08-03 11:24:15 TRACE BasicBinder - binding parameter [1] as [BIGINT] - [8]
+2024-08-03 11:24:20 DEBUG SQL - 
+    /* insert nn.ru.entity4.Company
+        */ insert 
+        into
+            companies
+            (group_id) 
+        values
+            (?)
+2024-08-03 11:24:20 TRACE BasicBinder - binding parameter [1] as [BIGINT] - [6]
+2024-08-03 11:25:01 INFO  pooling - HHH10001008: Cleaning up connection pool [jdbc:postgresql://localhost:5434/db_items_orders]
+2024-08-03 11:26:33 INFO  Version - HHH000412: Hibernate ORM core version 5.6.9.Final
+2024-08-03 11:26:34 INFO  Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-08-03 11:26:34 WARN  ConnectionProviderInitiator - HHH000022: c3p0 properties were encountered, but the c3p0 provider class was not found on the classpath; these properties are going to be ignored.
+2024-08-03 11:26:34 WARN  pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2024-08-03 11:26:34 INFO  pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5434/db_items_orders]
+2024-08-03 11:26:34 INFO  pooling - HHH10001001: Connection properties: {password=****, user=postgres}
+2024-08-03 11:26:34 INFO  pooling - HHH10001003: Autocommit mode: false
+2024-08-03 11:26:34 INFO  DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2024-08-03 11:26:34 INFO  Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2024-08-03 11:26:35 INFO  access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@194012a2] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2024-08-03 11:26:35 INFO  JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-08-03 11:26:35 DEBUG SQL - 
+    select
+        item0_.id as id1_2_0_ 
+    from
+        items item0_ 
+    where
+        item0_.id=?
+2024-08-03 11:26:35 TRACE BasicBinder - binding parameter [1] as [BIGINT] - [8]
+2024-08-03 11:26:35 DEBUG SQL - 
+    select
+        group0_.id as id1_1_0_,
+        group0_.item_id as item_id2_1_0_,
+        item1_.id as id1_2_1_ 
+    from
+        groups group0_ 
+    left outer join
+        items item1_ 
+            on group0_.item_id=item1_.id 
+    where
+        group0_.id=?
+2024-08-03 11:26:35 TRACE BasicBinder - binding parameter [1] as [BIGINT] - [6]
+2024-08-03 11:26:35 DEBUG SQL - 
+    select
+        company0_.id as id1_0_0_,
+        company0_.group_id as group_id2_0_0_,
+        group1_.id as id1_1_1_,
+        group1_.item_id as item_id2_1_1_,
+        item2_.id as id1_2_2_ 
+    from
+        companies company0_ 
+    left outer join
+        groups group1_ 
+            on company0_.group_id=group1_.id 
+    left outer join
+        items item2_ 
+            on group1_.item_id=item2_.id 
+    where
+        company0_.id=?
+2024-08-03 11:26:35 TRACE BasicBinder - binding parameter [1] as [BIGINT] - [11]
+2024-08-03 11:27:10 DEBUG SQL - 
+    /* insert nn.ru.entity4.Item
+        */ insert 
+        into
+            items
+            default 
+        values
+            
+2024-08-03 11:27:11 DEBUG SQL - 
+    /* insert nn.ru.entity4.Group
+        */ insert 
+        into
+            groups
+            (item_id) 
+        values
+            (?)
+2024-08-03 11:27:11 TRACE BasicBinder - binding parameter [1] as [BIGINT] - [8]
+2024-08-03 11:27:11 DEBUG SQL - 
+    /* insert nn.ru.entity4.Company
+        */ insert 
+        into
+            companies
+            (group_id) 
+        values
+            (?)
+2024-08-03 11:27:11 TRACE BasicBinder - binding parameter [1] as [BIGINT] - [6]
+2024-08-03 11:29:21 INFO  pooling - HHH10001008: Cleaning up connection pool [jdbc:postgresql://localhost:5434/db_items_orders]
+2024-08-03 11:31:50 INFO  Version - HHH000412: Hibernate ORM core version 5.6.9.Final
+2024-08-03 11:31:51 INFO  Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-08-03 11:31:51 WARN  ConnectionProviderInitiator - HHH000022: c3p0 properties were encountered, but the c3p0 provider class was not found on the classpath; these properties are going to be ignored.
+2024-08-03 11:31:51 WARN  pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2024-08-03 11:31:51 INFO  pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5434/db_items_orders]
+2024-08-03 11:31:51 INFO  pooling - HHH10001001: Connection properties: {password=****, user=postgres}
+2024-08-03 11:31:51 INFO  pooling - HHH10001003: Autocommit mode: false
+2024-08-03 11:31:51 INFO  DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2024-08-03 11:31:51 INFO  Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2024-08-03 11:31:52 INFO  access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@194012a2] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2024-08-03 11:31:52 INFO  JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-08-03 11:31:52 DEBUG SQL - 
+    select
+        item0_.id as id1_2_0_ 
+    from
+        items item0_ 
+    where
+        item0_.id=?
+2024-08-03 11:31:52 TRACE BasicBinder - binding parameter [1] as [BIGINT] - [8]
+2024-08-03 11:31:52 DEBUG SQL - 
+    select
+        group0_.id as id1_1_0_,
+        group0_.item_id as item_id2_1_0_,
+        item1_.id as id1_2_1_ 
+    from
+        groups group0_ 
+    left outer join
+        items item1_ 
+            on group0_.item_id=item1_.id 
+    where
+        group0_.id=?
+2024-08-03 11:31:52 TRACE BasicBinder - binding parameter [1] as [BIGINT] - [6]
+2024-08-03 11:31:52 DEBUG SQL - 
+    select
+        company0_.id as id1_0_0_,
+        company0_.group_id as group_id2_0_0_,
+        group1_.id as id1_1_1_,
+        group1_.item_id as item_id2_1_1_,
+        item2_.id as id1_2_2_ 
+    from
+        companies company0_ 
+    left outer join
+        groups group1_ 
+            on company0_.group_id=group1_.id 
+    left outer join
+        items item2_ 
+            on group1_.item_id=item2_.id 
+    where
+        company0_.id=?
+2024-08-03 11:31:52 TRACE BasicBinder - binding parameter [1] as [BIGINT] - [11]
+2024-08-03 11:31:52 DEBUG SQL - 
+    select
+        item0_.id as id1_2_0_ 
+    from
+        items item0_ 
+    where
+        item0_.id=?
+2024-08-03 11:31:52 TRACE BasicBinder - binding parameter [1] as [BIGINT] - [9]
+2024-08-03 11:32:08 DEBUG SQL - 
+    /* insert nn.ru.entity4.Group
+        */ insert 
+        into
+            groups
+            (item_id) 
+        values
+            (?)
+2024-08-03 11:32:08 TRACE BasicBinder - binding parameter [1] as [BIGINT] - [8]
+2024-08-03 11:32:13 DEBUG SQL - 
+    /* insert nn.ru.entity4.Company
+        */ insert 
+        into
+            companies
+            (group_id) 
+        values
+            (?)
+2024-08-03 11:32:13 TRACE BasicBinder - binding parameter [1] as [BIGINT] - [6]
+2024-08-03 11:35:47 INFO  pooling - HHH10001008: Cleaning up connection pool [jdbc:postgresql://localhost:5434/db_items_orders]
+2024-08-03 11:35:52 INFO  Version - HHH000412: Hibernate ORM core version 5.6.9.Final
+2024-08-03 11:35:52 INFO  Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-08-03 11:35:52 WARN  ConnectionProviderInitiator - HHH000022: c3p0 properties were encountered, but the c3p0 provider class was not found on the classpath; these properties are going to be ignored.
+2024-08-03 11:35:52 WARN  pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2024-08-03 11:35:52 INFO  pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5434/db_items_orders]
+2024-08-03 11:35:52 INFO  pooling - HHH10001001: Connection properties: {password=****, user=postgres}
+2024-08-03 11:35:52 INFO  pooling - HHH10001003: Autocommit mode: false
+2024-08-03 11:35:52 INFO  DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2024-08-03 11:35:53 INFO  Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2024-08-03 11:35:53 INFO  access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@194012a2] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2024-08-03 11:35:53 INFO  JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-08-03 11:35:53 DEBUG SQL - 
+    select
+        item0_.id as id1_2_0_ 
+    from
+        items item0_ 
+    where
+        item0_.id=?
+2024-08-03 11:35:53 TRACE BasicBinder - binding parameter [1] as [BIGINT] - [8]
+2024-08-03 11:35:53 DEBUG SQL - 
+    select
+        group0_.id as id1_1_0_,
+        group0_.item_id as item_id2_1_0_,
+        item1_.id as id1_2_1_ 
+    from
+        groups group0_ 
+    left outer join
+        items item1_ 
+            on group0_.item_id=item1_.id 
+    where
+        group0_.id=?
+2024-08-03 11:35:53 TRACE BasicBinder - binding parameter [1] as [BIGINT] - [6]
+2024-08-03 11:35:53 DEBUG SQL - 
+    select
+        company0_.id as id1_0_0_,
+        company0_.group_id as group_id2_0_0_,
+        group1_.id as id1_1_1_,
+        group1_.item_id as item_id2_1_1_,
+        item2_.id as id1_2_2_ 
+    from
+        companies company0_ 
+    left outer join
+        groups group1_ 
+            on company0_.group_id=group1_.id 
+    left outer join
+        items item2_ 
+            on group1_.item_id=item2_.id 
+    where
+        company0_.id=?
+2024-08-03 11:35:53 TRACE BasicBinder - binding parameter [1] as [BIGINT] - [11]
+2024-08-03 11:35:53 DEBUG SQL - 
+    select
+        item0_.id as id1_2_0_ 
+    from
+        items item0_ 
+    where
+        item0_.id=?
+2024-08-03 11:35:53 TRACE BasicBinder - binding parameter [1] as [BIGINT] - [9]
+2024-08-03 11:35:54 DEBUG SQL - 
+    /* insert nn.ru.entity4.Group
+        */ insert 
+        into
+            groups
+            (item_id) 
+        values
+            (?)
+2024-08-03 11:35:54 TRACE BasicBinder - binding parameter [1] as [BIGINT] - [8]
+2024-08-03 11:35:54 INFO  pooling - HHH10001008: Cleaning up connection pool [jdbc:postgresql://localhost:5434/db_items_orders]
+2024-08-03 11:36:16 INFO  Version - HHH000412: Hibernate ORM core version 5.6.9.Final
+2024-08-03 11:36:16 INFO  Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-08-03 11:36:16 WARN  ConnectionProviderInitiator - HHH000022: c3p0 properties were encountered, but the c3p0 provider class was not found on the classpath; these properties are going to be ignored.
+2024-08-03 11:36:16 WARN  pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2024-08-03 11:36:16 INFO  pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5434/db_items_orders]
+2024-08-03 11:36:16 INFO  pooling - HHH10001001: Connection properties: {password=****, user=postgres}
+2024-08-03 11:36:16 INFO  pooling - HHH10001003: Autocommit mode: false
+2024-08-03 11:36:16 INFO  DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2024-08-03 11:36:16 INFO  Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2024-08-03 11:36:17 INFO  access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@194012a2] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2024-08-03 11:36:17 INFO  JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-08-03 11:36:17 DEBUG SQL - 
+    select
+        item0_.id as id1_2_0_ 
+    from
+        items item0_ 
+    where
+        item0_.id=?
+2024-08-03 11:36:17 TRACE BasicBinder - binding parameter [1] as [BIGINT] - [8]
+2024-08-03 11:36:17 DEBUG SQL - 
+    select
+        group0_.id as id1_1_0_,
+        group0_.item_id as item_id2_1_0_,
+        item1_.id as id1_2_1_ 
+    from
+        groups group0_ 
+    left outer join
+        items item1_ 
+            on group0_.item_id=item1_.id 
+    where
+        group0_.id=?
+2024-08-03 11:36:17 TRACE BasicBinder - binding parameter [1] as [BIGINT] - [6]
+2024-08-03 11:36:17 DEBUG SQL - 
+    select
+        company0_.id as id1_0_0_,
+        company0_.group_id as group_id2_0_0_,
+        group1_.id as id1_1_1_,
+        group1_.item_id as item_id2_1_1_,
+        item2_.id as id1_2_2_ 
+    from
+        companies company0_ 
+    left outer join
+        groups group1_ 
+            on company0_.group_id=group1_.id 
+    left outer join
+        items item2_ 
+            on group1_.item_id=item2_.id 
+    where
+        company0_.id=?
+2024-08-03 11:36:17 TRACE BasicBinder - binding parameter [1] as [BIGINT] - [11]
+2024-08-03 11:36:17 DEBUG SQL - 
+    select
+        item0_.id as id1_2_0_ 
+    from
+        items item0_ 
+    where
+        item0_.id=?
+2024-08-03 11:36:17 TRACE BasicBinder - binding parameter [1] as [BIGINT] - [9]
+2024-08-03 11:36:20 DEBUG SQL - 
+    /* insert nn.ru.entity4.Group
+        */ insert 
+        into
+            groups
+            (item_id) 
+        values
+            (?)
+2024-08-03 11:36:20 TRACE BasicBinder - binding parameter [1] as [BIGINT] - [8]
+2024-08-03 11:37:17 INFO  pooling - HHH10001008: Cleaning up connection pool [jdbc:postgresql://localhost:5434/db_items_orders]
+2024-08-03 11:38:31 INFO  Version - HHH000412: Hibernate ORM core version 5.6.9.Final
+2024-08-03 11:38:32 INFO  Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-08-03 11:38:32 WARN  ConnectionProviderInitiator - HHH000022: c3p0 properties were encountered, but the c3p0 provider class was not found on the classpath; these properties are going to be ignored.
+2024-08-03 11:38:32 WARN  pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2024-08-03 11:38:32 INFO  pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5434/db_items_orders]
+2024-08-03 11:38:32 INFO  pooling - HHH10001001: Connection properties: {password=****, user=postgres}
+2024-08-03 11:38:32 INFO  pooling - HHH10001003: Autocommit mode: false
+2024-08-03 11:38:32 INFO  DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2024-08-03 11:38:32 INFO  Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2024-08-03 11:38:33 INFO  access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@2d130ac4] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2024-08-03 11:38:33 INFO  JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-08-03 11:38:33 DEBUG SQL - 
+    select
+        item0_.id as id1_2_0_ 
+    from
+        items item0_ 
+    where
+        item0_.id=?
+2024-08-03 11:38:33 TRACE BasicBinder - binding parameter [1] as [BIGINT] - [8]
+2024-08-03 11:38:33 DEBUG SQL - 
+    select
+        group0_.id as id1_1_0_,
+        group0_.item_id as item_id2_1_0_,
+        item1_.id as id1_2_1_ 
+    from
+        groups group0_ 
+    left outer join
+        items item1_ 
+            on group0_.item_id=item1_.id 
+    where
+        group0_.id=?
+2024-08-03 11:38:33 TRACE BasicBinder - binding parameter [1] as [BIGINT] - [6]
+2024-08-03 11:38:33 DEBUG SQL - 
+    select
+        company0_.id as id1_0_0_,
+        company0_.group_id as group_id2_0_0_ 
+    from
+        companies company0_ 
+    where
+        company0_.id=?
+2024-08-03 11:38:33 TRACE BasicBinder - binding parameter [1] as [BIGINT] - [11]
+2024-08-03 11:38:33 DEBUG SQL - 
+    select
+        item0_.id as id1_2_0_ 
+    from
+        items item0_ 
+    where
+        item0_.id=?
+2024-08-03 11:38:33 TRACE BasicBinder - binding parameter [1] as [BIGINT] - [9]
+2024-08-03 11:38:36 DEBUG SQL - 
+    /* insert nn.ru.entity4.Group
+        */ insert 
+        into
+            groups
+            (item_id) 
+        values
+            (?)
+2024-08-03 11:38:36 TRACE BasicBinder - binding parameter [1] as [BIGINT] - [8]
+2024-08-03 11:38:36 DEBUG SQL - 
+    /* insert nn.ru.entity4.Company
+        */ insert 
+        into
+            companies
+            (group_id) 
+        values
+            (?)
+2024-08-03 11:38:36 TRACE BasicBinder - binding parameter [1] as [BIGINT] - [6]
+2024-08-03 11:42:00 INFO  pooling - HHH10001008: Cleaning up connection pool [jdbc:postgresql://localhost:5434/db_items_orders]
+2024-08-03 11:47:13 INFO  Version - HHH000412: Hibernate ORM core version 5.6.9.Final
+2024-08-03 11:47:14 INFO  Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-08-03 11:47:14 WARN  ConnectionProviderInitiator - HHH000022: c3p0 properties were encountered, but the c3p0 provider class was not found on the classpath; these properties are going to be ignored.
+2024-08-03 11:47:14 WARN  pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2024-08-03 11:47:14 INFO  pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5434/db_items_orders]
+2024-08-03 11:47:14 INFO  pooling - HHH10001001: Connection properties: {password=****, user=postgres}
+2024-08-03 11:47:14 INFO  pooling - HHH10001003: Autocommit mode: false
+2024-08-03 11:47:14 INFO  DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2024-08-03 11:47:14 INFO  Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2024-08-03 11:47:15 INFO  access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@2d130ac4] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2024-08-03 11:47:15 DEBUG SQL - 
+    
+    create table companies (
+       id int8 generated by default as identity,
+        primary key (id)
+    )
+2024-08-03 11:47:15 DEBUG SQL - 
+    
+    create table groups (
+       id int8 generated by default as identity,
+        company_id int8,
+        primary key (id)
+    )
+2024-08-03 11:47:15 DEBUG SQL - 
+    
+    create table items (
+       id int8 generated by default as identity,
+        group_id int8,
+        primary key (id)
+    )
+2024-08-03 11:47:15 DEBUG SQL - 
+    
+    alter table if exists groups 
+       add constraint FKejvy31bprja3rd54iusumj9hy 
+       foreign key (company_id) 
+       references companies
+2024-08-03 11:47:15 DEBUG SQL - 
+    
+    alter table if exists items 
+       add constraint FK63behc5nfeo9wgt1vvplfnl6b 
+       foreign key (group_id) 
+       references groups
+2024-08-03 11:47:15 INFO  JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-08-03 11:47:21 DEBUG SQL - 
+    /* insert nn.ru.entity4.Item
+        */ insert 
+        into
+            items
+            (group_id) 
+        values
+            (?)
+2024-08-03 11:47:21 TRACE BasicBinder - binding parameter [1] as [BIGINT] - [null]
+2024-08-03 11:47:21 DEBUG SQL - 
+    /* insert nn.ru.entity4.Group
+        */ insert 
+        into
+            groups
+            (company_id) 
+        values
+            (?)
+2024-08-03 11:47:21 TRACE BasicBinder - binding parameter [1] as [BIGINT] - [null]
+2024-08-03 11:47:27 DEBUG SQL - 
+    /* insert nn.ru.entity4.Company
+        */ insert 
+        into
+            companies
+            default 
+        values
+            
+2024-08-03 11:48:28 DEBUG SQL - 
+    /* update
+        nn.ru.entity4.Item */ update
+            items 
+        set
+            group_id=? 
+        where
+            id=?
+2024-08-03 11:48:28 TRACE BasicBinder - binding parameter [1] as [BIGINT] - [1]
+2024-08-03 11:48:28 TRACE BasicBinder - binding parameter [2] as [BIGINT] - [1]
+2024-08-03 11:48:28 DEBUG SQL - 
+    /* update
+        nn.ru.entity4.Group */ update
+            groups 
+        set
+            company_id=? 
+        where
+            id=?
+2024-08-03 11:48:28 TRACE BasicBinder - binding parameter [1] as [BIGINT] - [1]
+2024-08-03 11:48:28 TRACE BasicBinder - binding parameter [2] as [BIGINT] - [1]
+2024-08-03 11:48:37 INFO  Version - HHH000412: Hibernate ORM core version 5.6.9.Final
+2024-08-03 11:48:38 INFO  Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-08-03 11:48:38 WARN  ConnectionProviderInitiator - HHH000022: c3p0 properties were encountered, but the c3p0 provider class was not found on the classpath; these properties are going to be ignored.
+2024-08-03 11:48:38 WARN  pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2024-08-03 11:48:38 INFO  pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5434/db_items_orders]
+2024-08-03 11:48:38 INFO  pooling - HHH10001001: Connection properties: {password=****, user=postgres}
+2024-08-03 11:48:38 INFO  pooling - HHH10001003: Autocommit mode: false
+2024-08-03 11:48:38 INFO  DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2024-08-03 11:48:38 INFO  Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2024-08-03 11:48:38 INFO  access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@47fcefb3] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2024-08-03 11:48:39 INFO  JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-08-03 11:48:39 DEBUG SQL - 
+    /* insert nn.ru.entity4.Item
+        */ insert 
+        into
+            items
+            (group_id) 
+        values
+            (?)
+2024-08-03 11:48:39 TRACE BasicBinder - binding parameter [1] as [BIGINT] - [null]
+2024-08-03 11:48:39 DEBUG SQL - 
+    /* insert nn.ru.entity4.Group
+        */ insert 
+        into
+            groups
+            (company_id) 
+        values
+            (?)
+2024-08-03 11:48:39 TRACE BasicBinder - binding parameter [1] as [BIGINT] - [null]
+2024-08-03 11:48:39 DEBUG SQL - 
+    /* insert nn.ru.entity4.Company
+        */ insert 
+        into
+            companies
+            default 
+        values
+            
+2024-08-03 11:48:39 DEBUG SQL - 
+    /* update
+        nn.ru.entity4.Item */ update
+            items 
+        set
+            group_id=? 
+        where
+            id=?
+2024-08-03 11:48:39 TRACE BasicBinder - binding parameter [1] as [BIGINT] - [2]
+2024-08-03 11:48:39 TRACE BasicBinder - binding parameter [2] as [BIGINT] - [2]
+2024-08-03 11:48:39 DEBUG SQL - 
+    /* update
+        nn.ru.entity4.Group */ update
+            groups 
+        set
+            company_id=? 
+        where
+            id=?
+2024-08-03 11:48:39 TRACE BasicBinder - binding parameter [1] as [BIGINT] - [2]
+2024-08-03 11:48:39 TRACE BasicBinder - binding parameter [2] as [BIGINT] - [2]
+2024-08-03 11:48:39 INFO  pooling - HHH10001008: Cleaning up connection pool [jdbc:postgresql://localhost:5434/db_items_orders]
+2024-08-03 11:48:42 INFO  Version - HHH000412: Hibernate ORM core version 5.6.9.Final
+2024-08-03 11:48:42 INFO  Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-08-03 11:48:43 WARN  ConnectionProviderInitiator - HHH000022: c3p0 properties were encountered, but the c3p0 provider class was not found on the classpath; these properties are going to be ignored.
+2024-08-03 11:48:43 WARN  pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2024-08-03 11:48:43 INFO  pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5434/db_items_orders]
+2024-08-03 11:48:43 INFO  pooling - HHH10001001: Connection properties: {password=****, user=postgres}
+2024-08-03 11:48:43 INFO  pooling - HHH10001003: Autocommit mode: false
+2024-08-03 11:48:43 INFO  DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2024-08-03 11:48:43 INFO  Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2024-08-03 11:48:43 INFO  access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@47fcefb3] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2024-08-03 11:48:44 INFO  JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-08-03 11:48:44 DEBUG SQL - 
+    /* insert nn.ru.entity4.Item
+        */ insert 
+        into
+            items
+            (group_id) 
+        values
+            (?)
+2024-08-03 11:48:44 TRACE BasicBinder - binding parameter [1] as [BIGINT] - [null]
+2024-08-03 11:48:44 DEBUG SQL - 
+    /* insert nn.ru.entity4.Group
+        */ insert 
+        into
+            groups
+            (company_id) 
+        values
+            (?)
+2024-08-03 11:48:44 TRACE BasicBinder - binding parameter [1] as [BIGINT] - [null]
+2024-08-03 11:48:44 DEBUG SQL - 
+    /* insert nn.ru.entity4.Company
+        */ insert 
+        into
+            companies
+            default 
+        values
+            
+2024-08-03 11:48:44 DEBUG SQL - 
+    /* update
+        nn.ru.entity4.Item */ update
+            items 
+        set
+            group_id=? 
+        where
+            id=?
+2024-08-03 11:48:44 TRACE BasicBinder - binding parameter [1] as [BIGINT] - [3]
+2024-08-03 11:48:44 TRACE BasicBinder - binding parameter [2] as [BIGINT] - [3]
+2024-08-03 11:48:44 DEBUG SQL - 
+    /* update
+        nn.ru.entity4.Group */ update
+            groups 
+        set
+            company_id=? 
+        where
+            id=?
+2024-08-03 11:48:44 TRACE BasicBinder - binding parameter [1] as [BIGINT] - [3]
+2024-08-03 11:48:44 TRACE BasicBinder - binding parameter [2] as [BIGINT] - [3]
+2024-08-03 11:48:44 INFO  pooling - HHH10001008: Cleaning up connection pool [jdbc:postgresql://localhost:5434/db_items_orders]
+2024-08-03 11:50:52 INFO  Version - HHH000412: Hibernate ORM core version 5.6.9.Final
+2024-08-03 11:50:53 INFO  Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-08-03 11:50:53 WARN  ConnectionProviderInitiator - HHH000022: c3p0 properties were encountered, but the c3p0 provider class was not found on the classpath; these properties are going to be ignored.
+2024-08-03 11:50:53 WARN  pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2024-08-03 11:50:53 INFO  pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5434/db_items_orders]
+2024-08-03 11:50:53 INFO  pooling - HHH10001001: Connection properties: {password=****, user=postgres}
+2024-08-03 11:50:53 INFO  pooling - HHH10001003: Autocommit mode: false
+2024-08-03 11:50:53 INFO  DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2024-08-03 11:50:53 INFO  Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2024-08-03 11:50:54 INFO  access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@236c098] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2024-08-03 11:50:54 INFO  JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-08-03 11:50:58 DEBUG SQL - 
+    /* insert nn.ru.entity4.Item
+        */ insert 
+        into
+            items
+            (group_id) 
+        values
+            (?)
+2024-08-03 11:50:58 TRACE BasicBinder - binding parameter [1] as [BIGINT] - [null]
+2024-08-03 11:50:58 DEBUG SQL - 
+    /* insert nn.ru.entity4.Group
+        */ insert 
+        into
+            groups
+            (company_id) 
+        values
+            (?)
+2024-08-03 11:50:58 TRACE BasicBinder - binding parameter [1] as [BIGINT] - [null]
+2024-08-03 11:50:58 DEBUG SQL - 
+    /* insert nn.ru.entity4.Company
+        */ insert 
+        into
+            companies
+            default 
+        values
+            
+2024-08-03 11:51:14 DEBUG SQL - 
+    /* update
+        nn.ru.entity4.Item */ update
+            items 
+        set
+            group_id=? 
+        where
+            id=?
+2024-08-03 11:51:14 TRACE BasicBinder - binding parameter [1] as [BIGINT] - [4]
+2024-08-03 11:51:14 TRACE BasicBinder - binding parameter [2] as [BIGINT] - [4]
+2024-08-03 11:51:14 DEBUG SQL - 
+    /* update
+        nn.ru.entity4.Group */ update
+            groups 
+        set
+            company_id=? 
+        where
+            id=?
+2024-08-03 11:51:14 TRACE BasicBinder - binding parameter [1] as [BIGINT] - [4]
+2024-08-03 11:51:14 TRACE BasicBinder - binding parameter [2] as [BIGINT] - [4]
+2024-08-03 11:51:14 INFO  pooling - HHH10001008: Cleaning up connection pool [jdbc:postgresql://localhost:5434/db_items_orders]
+2024-08-03 11:51:30 INFO  Version - HHH000412: Hibernate ORM core version 5.6.9.Final
+2024-08-03 11:51:30 INFO  Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-08-03 11:51:30 WARN  ConnectionProviderInitiator - HHH000022: c3p0 properties were encountered, but the c3p0 provider class was not found on the classpath; these properties are going to be ignored.
+2024-08-03 11:51:30 WARN  pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2024-08-03 11:51:30 INFO  pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5434/db_items_orders]
+2024-08-03 11:51:30 INFO  pooling - HHH10001001: Connection properties: {password=****, user=postgres}
+2024-08-03 11:51:30 INFO  pooling - HHH10001003: Autocommit mode: false
+2024-08-03 11:51:30 INFO  DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2024-08-03 11:51:31 INFO  Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2024-08-03 11:51:31 INFO  access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@236c098] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2024-08-03 11:51:31 INFO  JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-08-03 11:51:37 DEBUG SQL - 
+    /* insert nn.ru.entity4.Item
+        */ insert 
+        into
+            items
+            (group_id) 
+        values
+            (?)
+2024-08-03 11:51:37 TRACE BasicBinder - binding parameter [1] as [BIGINT] - [null]
+2024-08-03 11:51:37 DEBUG SQL - 
+    /* insert nn.ru.entity4.Group
+        */ insert 
+        into
+            groups
+            (company_id) 
+        values
+            (?)
+2024-08-03 11:51:37 TRACE BasicBinder - binding parameter [1] as [BIGINT] - [null]
+2024-08-03 11:51:37 DEBUG SQL - 
+    /* insert nn.ru.entity4.Company
+        */ insert 
+        into
+            companies
+            default 
+        values
+            
+2024-08-03 11:51:50 DEBUG SQL - 
+    /* update
+        nn.ru.entity4.Item */ update
+            items 
+        set
+            group_id=? 
+        where
+            id=?
+2024-08-03 11:51:50 TRACE BasicBinder - binding parameter [1] as [BIGINT] - [5]
+2024-08-03 11:51:50 TRACE BasicBinder - binding parameter [2] as [BIGINT] - [5]
+2024-08-03 11:51:51 INFO  pooling - HHH10001008: Cleaning up connection pool [jdbc:postgresql://localhost:5434/db_items_orders]
+2024-08-03 11:59:44 INFO  Version - HHH000412: Hibernate ORM core version 5.6.9.Final
+2024-08-03 11:59:45 INFO  Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-08-03 11:59:45 WARN  ConnectionProviderInitiator - HHH000022: c3p0 properties were encountered, but the c3p0 provider class was not found on the classpath; these properties are going to be ignored.
+2024-08-03 11:59:45 WARN  pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2024-08-03 11:59:45 INFO  pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5434/db_items_orders]
+2024-08-03 11:59:45 INFO  pooling - HHH10001001: Connection properties: {password=****, user=postgres}
+2024-08-03 11:59:45 INFO  pooling - HHH10001003: Autocommit mode: false
+2024-08-03 11:59:45 INFO  DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2024-08-03 11:59:45 INFO  Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2024-08-03 11:59:45 INFO  pooling - HHH10001008: Cleaning up connection pool [jdbc:postgresql://localhost:5434/db_items_orders]
+2024-08-03 12:01:29 INFO  Version - HHH000412: Hibernate ORM core version 5.6.9.Final
+2024-08-03 12:01:29 INFO  Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-08-03 12:01:29 WARN  ConnectionProviderInitiator - HHH000022: c3p0 properties were encountered, but the c3p0 provider class was not found on the classpath; these properties are going to be ignored.
+2024-08-03 12:01:30 WARN  pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2024-08-03 12:01:30 INFO  pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5434/db_items_orders]
+2024-08-03 12:01:30 INFO  pooling - HHH10001001: Connection properties: {password=****, user=postgres}
+2024-08-03 12:01:30 INFO  pooling - HHH10001003: Autocommit mode: false
+2024-08-03 12:01:30 INFO  DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2024-08-03 12:01:30 INFO  Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2024-08-03 12:01:30 INFO  pooling - HHH10001008: Cleaning up connection pool [jdbc:postgresql://localhost:5434/db_items_orders]
+2024-08-03 12:01:58 INFO  Version - HHH000412: Hibernate ORM core version 5.6.9.Final
+2024-08-03 12:01:58 INFO  Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-08-03 12:01:59 WARN  ConnectionProviderInitiator - HHH000022: c3p0 properties were encountered, but the c3p0 provider class was not found on the classpath; these properties are going to be ignored.
+2024-08-03 12:01:59 WARN  pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2024-08-03 12:01:59 INFO  pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5434/db_items_orders]
+2024-08-03 12:01:59 INFO  pooling - HHH10001001: Connection properties: {password=****, user=postgres}
+2024-08-03 12:01:59 INFO  pooling - HHH10001003: Autocommit mode: false
+2024-08-03 12:01:59 INFO  DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2024-08-03 12:01:59 INFO  Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2024-08-03 12:01:59 INFO  pooling - HHH10001008: Cleaning up connection pool [jdbc:postgresql://localhost:5434/db_items_orders]
+2024-08-03 12:02:34 INFO  Version - HHH000412: Hibernate ORM core version 5.6.9.Final
+2024-08-03 12:02:34 INFO  Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-08-03 12:02:34 WARN  ConnectionProviderInitiator - HHH000022: c3p0 properties were encountered, but the c3p0 provider class was not found on the classpath; these properties are going to be ignored.
+2024-08-03 12:02:34 WARN  pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2024-08-03 12:02:34 INFO  pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5434/db_items_orders]
+2024-08-03 12:02:34 INFO  pooling - HHH10001001: Connection properties: {password=****, user=postgres}
+2024-08-03 12:02:34 INFO  pooling - HHH10001003: Autocommit mode: false
+2024-08-03 12:02:34 INFO  DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2024-08-03 12:02:35 INFO  Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2024-08-03 12:02:35 INFO  pooling - HHH10001008: Cleaning up connection pool [jdbc:postgresql://localhost:5434/db_items_orders]
+2024-08-03 12:03:17 INFO  Version - HHH000412: Hibernate ORM core version 5.6.9.Final
+2024-08-03 12:03:18 INFO  Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-08-03 12:03:18 WARN  ConnectionProviderInitiator - HHH000022: c3p0 properties were encountered, but the c3p0 provider class was not found on the classpath; these properties are going to be ignored.
+2024-08-03 12:03:18 WARN  pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2024-08-03 12:03:18 INFO  pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5434/db_items_orders]
+2024-08-03 12:03:18 INFO  pooling - HHH10001001: Connection properties: {password=****, user=postgres}
+2024-08-03 12:03:18 INFO  pooling - HHH10001003: Autocommit mode: false
+2024-08-03 12:03:18 INFO  DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2024-08-03 12:03:18 INFO  Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2024-08-03 12:03:19 INFO  access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@6ad6443] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2024-08-03 12:03:19 INFO  JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-08-03 12:03:26 DEBUG SQL - 
+    /* insert nn.ru.entity4.Item
+        */ insert 
+        into
+            items
+            (group_id) 
+        values
+            (?)
+2024-08-03 12:03:26 TRACE BasicBinder - binding parameter [1] as [BIGINT] - [null]
+2024-08-03 12:03:26 DEBUG SQL - 
+    /* insert nn.ru.entity4.Group
+        */ insert 
+        into
+            groups
+            (company_id) 
+        values
+            (?)
+2024-08-03 12:03:26 TRACE BasicBinder - binding parameter [1] as [BIGINT] - [null]
+2024-08-03 12:03:26 DEBUG SQL - 
+    /* insert nn.ru.entity4.Company
+        */ insert 
+        into
+            companies
+            default 
+        values
+            
+2024-08-03 12:04:42 INFO  Version - HHH000412: Hibernate ORM core version 5.6.9.Final
+2024-08-03 12:04:43 INFO  Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-08-03 12:04:43 WARN  ConnectionProviderInitiator - HHH000022: c3p0 properties were encountered, but the c3p0 provider class was not found on the classpath; these properties are going to be ignored.
+2024-08-03 12:04:43 WARN  pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2024-08-03 12:04:43 INFO  pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5434/db_items_orders]
+2024-08-03 12:04:43 INFO  pooling - HHH10001001: Connection properties: {password=****, user=postgres}
+2024-08-03 12:04:43 INFO  pooling - HHH10001003: Autocommit mode: false
+2024-08-03 12:04:43 INFO  DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2024-08-03 12:04:43 INFO  Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2024-08-03 12:04:44 INFO  access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@6ad6443] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2024-08-03 12:04:44 INFO  JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-08-03 12:04:48 DEBUG SQL - 
+    /* insert nn.ru.entity4.Item
+        */ insert 
+        into
+            items
+            (group_id) 
+        values
+            (?)
+2024-08-03 12:04:48 TRACE BasicBinder - binding parameter [1] as [BIGINT] - [null]
+2024-08-03 12:04:48 DEBUG SQL - 
+    /* insert nn.ru.entity4.Group
+        */ insert 
+        into
+            groups
+            (company_id) 
+        values
+            (?)
+2024-08-03 12:04:48 TRACE BasicBinder - binding parameter [1] as [BIGINT] - [null]
+2024-08-03 12:04:48 DEBUG SQL - 
+    /* insert nn.ru.entity4.Company
+        */ insert 
+        into
+            companies
+            default 
+        values
+            
+2024-08-03 12:07:20 INFO  Version - HHH000412: Hibernate ORM core version 5.6.9.Final
+2024-08-03 12:07:23 INFO  Version - HHH000412: Hibernate ORM core version 5.6.9.Final
+2024-08-03 12:07:24 INFO  Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-08-03 12:07:24 WARN  ConnectionProviderInitiator - HHH000022: c3p0 properties were encountered, but the c3p0 provider class was not found on the classpath; these properties are going to be ignored.
+2024-08-03 12:07:24 WARN  pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2024-08-03 12:07:24 INFO  pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5434/db_items_orders]
+2024-08-03 12:07:24 INFO  pooling - HHH10001001: Connection properties: {password=****, user=postgres}
+2024-08-03 12:07:24 INFO  pooling - HHH10001003: Autocommit mode: false
+2024-08-03 12:07:24 INFO  DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2024-08-03 12:07:24 INFO  Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2024-08-03 12:07:25 INFO  access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@32ab408e] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2024-08-03 12:07:25 INFO  JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-08-03 12:07:25 DEBUG SQL - 
+    /* insert nn.ru.entity4.Item
+        */ insert 
+        into
+            items
+            (group_id) 
+        values
+            (?)
+2024-08-03 12:07:25 TRACE BasicBinder - binding parameter [1] as [BIGINT] - [null]
+2024-08-03 12:07:25 DEBUG SQL - 
+    /* insert nn.ru.entity4.Group
+        */ insert 
+        into
+            groups
+            (company_id) 
+        values
+            (?)
+2024-08-03 12:07:25 TRACE BasicBinder - binding parameter [1] as [BIGINT] - [null]
+2024-08-03 12:07:25 DEBUG SQL - 
+    /* insert nn.ru.entity4.Company
+        */ insert 
+        into
+            companies
+            default 
+        values
+            
+2024-08-03 12:07:29 INFO  Version - HHH000412: Hibernate ORM core version 5.6.9.Final
+2024-08-03 12:07:29 INFO  Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-08-03 12:07:29 WARN  ConnectionProviderInitiator - HHH000022: c3p0 properties were encountered, but the c3p0 provider class was not found on the classpath; these properties are going to be ignored.
+2024-08-03 12:07:29 WARN  pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2024-08-03 12:07:29 INFO  pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5434/db_items_orders]
+2024-08-03 12:07:29 INFO  pooling - HHH10001001: Connection properties: {password=****, user=postgres}
+2024-08-03 12:07:29 INFO  pooling - HHH10001003: Autocommit mode: false
+2024-08-03 12:07:29 INFO  DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2024-08-03 12:07:29 INFO  Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2024-08-03 12:07:30 INFO  access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@32ab408e] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2024-08-03 12:07:30 INFO  JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-08-03 12:07:30 DEBUG SQL - 
+    /* insert nn.ru.entity4.Item
+        */ insert 
+        into
+            items
+            (group_id) 
+        values
+            (?)
+2024-08-03 12:07:30 TRACE BasicBinder - binding parameter [1] as [BIGINT] - [null]
+2024-08-03 12:07:30 DEBUG SQL - 
+    /* insert nn.ru.entity4.Group
+        */ insert 
+        into
+            groups
+            (company_id) 
+        values
+            (?)
+2024-08-03 12:07:30 TRACE BasicBinder - binding parameter [1] as [BIGINT] - [null]
+2024-08-03 12:07:30 DEBUG SQL - 
+    /* insert nn.ru.entity4.Company
+        */ insert 
+        into
+            companies
+            default 
+        values
+            
+2024-08-03 12:07:33 INFO  Version - HHH000412: Hibernate ORM core version 5.6.9.Final
+2024-08-03 12:07:33 INFO  Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-08-03 12:07:34 WARN  ConnectionProviderInitiator - HHH000022: c3p0 properties were encountered, but the c3p0 provider class was not found on the classpath; these properties are going to be ignored.
+2024-08-03 12:07:34 WARN  pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2024-08-03 12:07:34 INFO  pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5434/db_items_orders]
+2024-08-03 12:07:34 INFO  pooling - HHH10001001: Connection properties: {password=****, user=postgres}
+2024-08-03 12:07:34 INFO  pooling - HHH10001003: Autocommit mode: false
+2024-08-03 12:07:34 INFO  DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2024-08-03 12:07:34 INFO  Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2024-08-03 12:07:34 INFO  access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@32ab408e] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2024-08-03 12:07:34 INFO  JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-08-03 12:07:34 DEBUG SQL - 
+    /* insert nn.ru.entity4.Item
+        */ insert 
+        into
+            items
+            (group_id) 
+        values
+            (?)
+2024-08-03 12:07:34 TRACE BasicBinder - binding parameter [1] as [BIGINT] - [null]
+2024-08-03 12:07:34 DEBUG SQL - 
+    /* insert nn.ru.entity4.Group
+        */ insert 
+        into
+            groups
+            (company_id) 
+        values
+            (?)
+2024-08-03 12:07:34 TRACE BasicBinder - binding parameter [1] as [BIGINT] - [null]
+2024-08-03 12:07:34 DEBUG SQL - 
+    /* insert nn.ru.entity4.Company
+        */ insert 
+        into
+            companies
+            default 
+        values
+            
+2024-08-03 12:07:50 INFO  Version - HHH000412: Hibernate ORM core version 5.6.9.Final
+2024-08-03 12:07:51 INFO  Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-08-03 12:07:51 WARN  ConnectionProviderInitiator - HHH000022: c3p0 properties were encountered, but the c3p0 provider class was not found on the classpath; these properties are going to be ignored.
+2024-08-03 12:07:51 WARN  pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2024-08-03 12:07:51 INFO  pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5434/db_items_orders]
+2024-08-03 12:07:51 INFO  pooling - HHH10001001: Connection properties: {password=****, user=postgres}
+2024-08-03 12:07:51 INFO  pooling - HHH10001003: Autocommit mode: false
+2024-08-03 12:07:51 INFO  DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2024-08-03 12:07:51 INFO  Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2024-08-03 12:07:51 INFO  access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@32ab408e] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2024-08-03 12:07:52 INFO  JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-08-03 12:07:52 DEBUG SQL - 
+    /* insert nn.ru.entity4.Item
+        */ insert 
+        into
+            items
+            (group_id) 
+        values
+            (?)
+2024-08-03 12:07:52 TRACE BasicBinder - binding parameter [1] as [BIGINT] - [null]
+2024-08-03 12:07:52 DEBUG SQL - 
+    /* insert nn.ru.entity4.Group
+        */ insert 
+        into
+            groups
+            (company_id) 
+        values
+            (?)
+2024-08-03 12:07:52 TRACE BasicBinder - binding parameter [1] as [BIGINT] - [null]
+2024-08-03 12:07:52 DEBUG SQL - 
+    /* insert nn.ru.entity4.Company
+        */ insert 
+        into
+            companies
+            default 
+        values
+            
+2024-08-03 12:08:18 INFO  Version - HHH000412: Hibernate ORM core version 5.6.9.Final
+2024-08-03 12:08:18 INFO  Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-08-03 12:08:18 WARN  ConnectionProviderInitiator - HHH000022: c3p0 properties were encountered, but the c3p0 provider class was not found on the classpath; these properties are going to be ignored.
+2024-08-03 12:08:18 WARN  pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2024-08-03 12:08:18 INFO  pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5434/db_items_orders]
+2024-08-03 12:08:18 INFO  pooling - HHH10001001: Connection properties: {password=****, user=postgres}
+2024-08-03 12:08:18 INFO  pooling - HHH10001003: Autocommit mode: false
+2024-08-03 12:08:18 INFO  DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2024-08-03 12:08:19 INFO  Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2024-08-03 12:08:19 INFO  access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@32ab408e] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2024-08-03 12:08:19 INFO  JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-08-03 12:08:19 DEBUG SQL - 
+    /* insert nn.ru.entity4.Item
+        */ insert 
+        into
+            items
+            (group_id) 
+        values
+            (?)
+2024-08-03 12:08:19 TRACE BasicBinder - binding parameter [1] as [BIGINT] - [null]
+2024-08-03 12:08:19 DEBUG SQL - 
+    /* insert nn.ru.entity4.Group
+        */ insert 
+        into
+            groups
+            (company_id) 
+        values
+            (?)
+2024-08-03 12:08:19 TRACE BasicBinder - binding parameter [1] as [BIGINT] - [null]
+2024-08-03 12:08:19 DEBUG SQL - 
+    /* insert nn.ru.entity4.Company
+        */ insert 
+        into
+            companies
+            default 
+        values
+            
+2024-08-03 12:09:12 INFO  Version - HHH000412: Hibernate ORM core version 5.6.9.Final
+2024-08-03 12:09:13 INFO  Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-08-03 12:09:13 WARN  ConnectionProviderInitiator - HHH000022: c3p0 properties were encountered, but the c3p0 provider class was not found on the classpath; these properties are going to be ignored.
+2024-08-03 12:09:13 WARN  pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2024-08-03 12:09:13 INFO  pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5434/db_items_orders]
+2024-08-03 12:09:13 INFO  pooling - HHH10001001: Connection properties: {password=****, user=postgres}
+2024-08-03 12:09:13 INFO  pooling - HHH10001003: Autocommit mode: false
+2024-08-03 12:09:13 INFO  DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2024-08-03 12:09:13 INFO  Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2024-08-03 12:09:14 INFO  access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@6ad6443] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2024-08-03 12:09:14 INFO  JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-08-03 12:09:19 DEBUG SQL - 
+    /* insert nn.ru.entity4.Item
+        */ insert 
+        into
+            items
+            (group_id) 
+        values
+            (?)
+2024-08-03 12:09:19 TRACE BasicBinder - binding parameter [1] as [BIGINT] - [null]
+2024-08-03 12:09:21 DEBUG SQL - 
+    /* insert nn.ru.entity4.Group
+        */ insert 
+        into
+            groups
+            (company_id) 
+        values
+            (?)
+2024-08-03 12:09:21 TRACE BasicBinder - binding parameter [1] as [BIGINT] - [null]
+2024-08-03 12:09:23 DEBUG SQL - 
+    /* insert nn.ru.entity4.Company
+        */ insert 
+        into
+            companies
+            default 
+        values
+            
+2024-08-03 12:11:09 INFO  Version - HHH000412: Hibernate ORM core version 5.6.9.Final
+2024-08-03 12:11:10 INFO  Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-08-03 12:11:10 WARN  ConnectionProviderInitiator - HHH000022: c3p0 properties were encountered, but the c3p0 provider class was not found on the classpath; these properties are going to be ignored.
+2024-08-03 12:11:10 WARN  pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2024-08-03 12:11:10 INFO  pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5434/db_items_orders]
+2024-08-03 12:11:10 INFO  pooling - HHH10001001: Connection properties: {password=****, user=postgres}
+2024-08-03 12:11:10 INFO  pooling - HHH10001003: Autocommit mode: false
+2024-08-03 12:11:10 INFO  DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2024-08-03 12:11:10 INFO  Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2024-08-03 12:11:11 INFO  access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@32ab408e] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2024-08-03 12:11:11 INFO  JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-08-03 12:11:11 DEBUG SQL - 
+    /* insert nn.ru.entity4.Item
+        */ insert 
+        into
+            items
+            (group_id) 
+        values
+            (?)
+2024-08-03 12:11:11 TRACE BasicBinder - binding parameter [1] as [BIGINT] - [null]
+2024-08-03 12:11:11 DEBUG SQL - 
+    /* insert nn.ru.entity4.Group
+        */ insert 
+        into
+            groups
+            (company_id) 
+        values
+            (?)
+2024-08-03 12:11:11 TRACE BasicBinder - binding parameter [1] as [BIGINT] - [null]
+2024-08-03 12:11:11 DEBUG SQL - 
+    /* insert nn.ru.entity4.Company
+        */ insert 
+        into
+            companies
+            default 
+        values
+            
+2024-08-03 12:11:11 DEBUG SQL - 
+    /* update
+        nn.ru.entity4.Item */ update
+            items 
+        set
+            group_id=? 
+        where
+            id=?
+2024-08-03 12:11:11 TRACE BasicBinder - binding parameter [1] as [BIGINT] - [14]
+2024-08-03 12:11:11 TRACE BasicBinder - binding parameter [2] as [BIGINT] - [14]
+2024-08-03 12:11:11 DEBUG SQL - 
+    /* update
+        nn.ru.entity4.Group */ update
+            groups 
+        set
+            company_id=? 
+        where
+            id=?
+2024-08-03 12:11:11 TRACE BasicBinder - binding parameter [1] as [BIGINT] - [14]
+2024-08-03 12:11:11 TRACE BasicBinder - binding parameter [2] as [BIGINT] - [14]
+2024-08-03 12:11:11 INFO  pooling - HHH10001008: Cleaning up connection pool [jdbc:postgresql://localhost:5434/db_items_orders]
+2024-08-03 12:11:33 INFO  Version - HHH000412: Hibernate ORM core version 5.6.9.Final
+2024-08-03 12:11:34 INFO  Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-08-03 12:11:34 WARN  ConnectionProviderInitiator - HHH000022: c3p0 properties were encountered, but the c3p0 provider class was not found on the classpath; these properties are going to be ignored.
+2024-08-03 12:11:34 WARN  pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2024-08-03 12:11:34 INFO  pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5434/db_items_orders]
+2024-08-03 12:11:34 INFO  pooling - HHH10001001: Connection properties: {password=****, user=postgres}
+2024-08-03 12:11:34 INFO  pooling - HHH10001003: Autocommit mode: false
+2024-08-03 12:11:34 INFO  DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2024-08-03 12:11:34 INFO  Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2024-08-03 12:11:35 INFO  access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@6ad6443] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2024-08-03 12:11:35 INFO  JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-08-03 12:11:39 DEBUG SQL - 
+    /* insert nn.ru.entity4.Item
+        */ insert 
+        into
+            items
+            (group_id) 
+        values
+            (?)
+2024-08-03 12:11:39 TRACE BasicBinder - binding parameter [1] as [BIGINT] - [null]
+2024-08-03 12:11:39 DEBUG SQL - 
+    /* insert nn.ru.entity4.Group
+        */ insert 
+        into
+            groups
+            (company_id) 
+        values
+            (?)
+2024-08-03 12:11:39 TRACE BasicBinder - binding parameter [1] as [BIGINT] - [null]
+2024-08-03 12:11:39 DEBUG SQL - 
+    /* insert nn.ru.entity4.Company
+        */ insert 
+        into
+            companies
+            default 
+        values
+            
+2024-08-03 12:11:41 DEBUG SQL - 
+    /* update
+        nn.ru.entity4.Item */ update
+            items 
+        set
+            group_id=? 
+        where
+            id=?
+2024-08-03 12:11:41 TRACE BasicBinder - binding parameter [1] as [BIGINT] - [15]
+2024-08-03 12:11:41 TRACE BasicBinder - binding parameter [2] as [BIGINT] - [15]
+2024-08-03 12:11:41 DEBUG SQL - 
+    /* update
+        nn.ru.entity4.Group */ update
+            groups 
+        set
+            company_id=? 
+        where
+            id=?
+2024-08-03 12:11:41 TRACE BasicBinder - binding parameter [1] as [BIGINT] - [15]
+2024-08-03 12:11:41 TRACE BasicBinder - binding parameter [2] as [BIGINT] - [15]
+2024-08-03 12:11:41 INFO  pooling - HHH10001008: Cleaning up connection pool [jdbc:postgresql://localhost:5434/db_items_orders]
+2024-08-03 12:12:00 INFO  Version - HHH000412: Hibernate ORM core version 5.6.9.Final
+2024-08-03 12:12:01 INFO  Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-08-03 12:12:01 WARN  ConnectionProviderInitiator - HHH000022: c3p0 properties were encountered, but the c3p0 provider class was not found on the classpath; these properties are going to be ignored.
+2024-08-03 12:12:01 WARN  pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2024-08-03 12:12:01 INFO  pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5434/db_items_orders]
+2024-08-03 12:12:01 INFO  pooling - HHH10001001: Connection properties: {password=****, user=postgres}
+2024-08-03 12:12:01 INFO  pooling - HHH10001003: Autocommit mode: false
+2024-08-03 12:12:01 INFO  DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2024-08-03 12:12:01 INFO  Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2024-08-03 12:12:01 INFO  access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@6ad6443] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2024-08-03 12:12:02 INFO  JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-08-03 12:12:02 DEBUG SQL - 
+    select
+        item0_.id as id1_2_0_,
+        item0_.group_id as group_id2_2_0_ 
+    from
+        items item0_ 
+    where
+        item0_.id=?
+2024-08-03 12:12:02 TRACE BasicBinder - binding parameter [1] as [BIGINT] - [8]
+2024-08-03 12:12:02 DEBUG SQL - 
+    select
+        group0_.id as id1_1_0_,
+        group0_.company_id as company_2_1_0_ 
+    from
+        groups group0_ 
+    where
+        group0_.id=?
+2024-08-03 12:12:02 TRACE BasicBinder - binding parameter [1] as [BIGINT] - [6]
+2024-08-03 12:12:02 DEBUG SQL - 
+    select
+        company0_.id as id1_0_0_ 
+    from
+        companies company0_ 
+    where
+        company0_.id=?
+2024-08-03 12:12:02 TRACE BasicBinder - binding parameter [1] as [BIGINT] - [11]
+2024-08-03 12:12:02 DEBUG SQL - 
+    select
+        item0_.id as id1_2_0_,
+        item0_.group_id as group_id2_2_0_ 
+    from
+        items item0_ 
+    where
+        item0_.id=?
+2024-08-03 12:12:02 TRACE BasicBinder - binding parameter [1] as [BIGINT] - [9]
+2024-08-03 12:12:04 DEBUG SQL - 
+    /* insert nn.ru.entity4.Item
+        */ insert 
+        into
+            items
+            (group_id) 
+        values
+            (?)
+2024-08-03 12:12:04 TRACE BasicBinder - binding parameter [1] as [BIGINT] - [null]
+2024-08-03 12:12:04 DEBUG SQL - 
+    /* insert nn.ru.entity4.Group
+        */ insert 
+        into
+            groups
+            (company_id) 
+        values
+            (?)
+2024-08-03 12:12:04 TRACE BasicBinder - binding parameter [1] as [BIGINT] - [null]
+2024-08-03 12:12:04 DEBUG SQL - 
+    /* insert nn.ru.entity4.Company
+        */ insert 
+        into
+            companies
+            default 
+        values
+            
+2024-08-03 12:12:04 DEBUG SQL - 
+    /* update
+        nn.ru.entity4.Item */ update
+            items 
+        set
+            group_id=? 
+        where
+            id=?
+2024-08-03 12:12:04 TRACE BasicBinder - binding parameter [1] as [BIGINT] - [16]
+2024-08-03 12:12:04 TRACE BasicBinder - binding parameter [2] as [BIGINT] - [16]
+2024-08-03 12:12:04 DEBUG SQL - 
+    /* update
+        nn.ru.entity4.Group */ update
+            groups 
+        set
+            company_id=? 
+        where
+            id=?
+2024-08-03 12:12:04 TRACE BasicBinder - binding parameter [1] as [BIGINT] - [16]
+2024-08-03 12:12:04 TRACE BasicBinder - binding parameter [2] as [BIGINT] - [16]
+2024-08-03 12:12:05 INFO  pooling - HHH10001008: Cleaning up connection pool [jdbc:postgresql://localhost:5434/db_items_orders]
+2024-08-03 12:12:11 INFO  Version - HHH000412: Hibernate ORM core version 5.6.9.Final
+2024-08-03 12:12:12 INFO  Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-08-03 12:12:12 WARN  ConnectionProviderInitiator - HHH000022: c3p0 properties were encountered, but the c3p0 provider class was not found on the classpath; these properties are going to be ignored.
+2024-08-03 12:12:12 WARN  pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2024-08-03 12:12:12 INFO  pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5434/db_items_orders]
+2024-08-03 12:12:12 INFO  pooling - HHH10001001: Connection properties: {password=****, user=postgres}
+2024-08-03 12:12:12 INFO  pooling - HHH10001003: Autocommit mode: false
+2024-08-03 12:12:12 INFO  DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2024-08-03 12:12:12 INFO  Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2024-08-03 12:12:13 INFO  access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@6ad6443] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2024-08-03 12:12:13 INFO  JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-08-03 12:12:13 DEBUG SQL - 
+    select
+        item0_.id as id1_2_0_,
+        item0_.group_id as group_id2_2_0_ 
+    from
+        items item0_ 
+    where
+        item0_.id=?
+2024-08-03 12:12:13 TRACE BasicBinder - binding parameter [1] as [BIGINT] - [8]
+2024-08-03 12:12:13 DEBUG SQL - 
+    select
+        group0_.id as id1_1_0_,
+        group0_.company_id as company_2_1_0_ 
+    from
+        groups group0_ 
+    where
+        group0_.id=?
+2024-08-03 12:12:13 TRACE BasicBinder - binding parameter [1] as [BIGINT] - [6]
+2024-08-03 12:12:13 DEBUG SQL - 
+    select
+        company0_.id as id1_0_0_ 
+    from
+        companies company0_ 
+    where
+        company0_.id=?
+2024-08-03 12:12:13 TRACE BasicBinder - binding parameter [1] as [BIGINT] - [11]
+2024-08-03 12:12:13 DEBUG SQL - 
+    select
+        item0_.id as id1_2_0_,
+        item0_.group_id as group_id2_2_0_ 
+    from
+        items item0_ 
+    where
+        item0_.id=?
+2024-08-03 12:12:13 TRACE BasicBinder - binding parameter [1] as [BIGINT] - [9]
+2024-08-03 12:12:17 DEBUG SQL - 
+    /* insert nn.ru.entity4.Item
+        */ insert 
+        into
+            items
+            (group_id) 
+        values
+            (?)
+2024-08-03 12:12:17 TRACE BasicBinder - binding parameter [1] as [BIGINT] - [null]
+2024-08-03 12:12:17 DEBUG SQL - 
+    /* insert nn.ru.entity4.Group
+        */ insert 
+        into
+            groups
+            (company_id) 
+        values
+            (?)
+2024-08-03 12:12:17 TRACE BasicBinder - binding parameter [1] as [BIGINT] - [null]
+2024-08-03 12:12:17 DEBUG SQL - 
+    /* insert nn.ru.entity4.Company
+        */ insert 
+        into
+            companies
+            default 
+        values
+            
+2024-08-03 12:12:24 DEBUG SQL - 
+    /* update
+        nn.ru.entity4.Item */ update
+            items 
+        set
+            group_id=? 
+        where
+            id=?
+2024-08-03 12:12:24 TRACE BasicBinder - binding parameter [1] as [BIGINT] - [17]
+2024-08-03 12:12:24 TRACE BasicBinder - binding parameter [2] as [BIGINT] - [17]
+2024-08-03 12:12:24 DEBUG SQL - 
+    /* update
+        nn.ru.entity4.Group */ update
+            groups 
+        set
+            company_id=? 
+        where
+            id=?
+2024-08-03 12:12:24 TRACE BasicBinder - binding parameter [1] as [BIGINT] - [17]
+2024-08-03 12:12:24 TRACE BasicBinder - binding parameter [2] as [BIGINT] - [17]
+2024-08-03 12:12:24 INFO  pooling - HHH10001008: Cleaning up connection pool [jdbc:postgresql://localhost:5434/db_items_orders]
+2024-08-03 12:13:53 INFO  Version - HHH000412: Hibernate ORM core version 5.6.9.Final
+2024-08-03 12:13:54 INFO  Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-08-03 12:13:54 WARN  ConnectionProviderInitiator - HHH000022: c3p0 properties were encountered, but the c3p0 provider class was not found on the classpath; these properties are going to be ignored.
+2024-08-03 12:13:54 WARN  pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2024-08-03 12:13:54 INFO  pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5434/db_items_orders]
+2024-08-03 12:13:54 INFO  pooling - HHH10001001: Connection properties: {password=****, user=postgres}
+2024-08-03 12:13:54 INFO  pooling - HHH10001003: Autocommit mode: false
+2024-08-03 12:13:54 INFO  DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2024-08-03 12:13:54 INFO  Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2024-08-03 12:13:55 INFO  access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@6ad6443] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2024-08-03 12:13:55 INFO  JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-08-03 12:13:55 DEBUG SQL - 
+    select
+        item0_.id as id1_2_0_,
+        item0_.group_id as group_id2_2_0_ 
+    from
+        items item0_ 
+    where
+        item0_.id=?
+2024-08-03 12:13:55 TRACE BasicBinder - binding parameter [1] as [BIGINT] - [8]
+2024-08-03 12:13:55 DEBUG SQL - 
+    select
+        group0_.id as id1_1_0_,
+        group0_.company_id as company_2_1_0_ 
+    from
+        groups group0_ 
+    where
+        group0_.id=?
+2024-08-03 12:13:55 TRACE BasicBinder - binding parameter [1] as [BIGINT] - [6]
+2024-08-03 12:13:55 DEBUG SQL - 
+    select
+        company0_.id as id1_0_0_ 
+    from
+        companies company0_ 
+    where
+        company0_.id=?
+2024-08-03 12:13:55 TRACE BasicBinder - binding parameter [1] as [BIGINT] - [11]
+2024-08-03 12:13:55 DEBUG SQL - 
+    select
+        item0_.id as id1_2_0_,
+        item0_.group_id as group_id2_2_0_ 
+    from
+        items item0_ 
+    where
+        item0_.id=?
+2024-08-03 12:13:55 TRACE BasicBinder - binding parameter [1] as [BIGINT] - [9]
+2024-08-03 12:16:32 INFO  Version - HHH000412: Hibernate ORM core version 5.6.9.Final
+2024-08-03 12:16:32 INFO  Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-08-03 12:16:32 WARN  ConnectionProviderInitiator - HHH000022: c3p0 properties were encountered, but the c3p0 provider class was not found on the classpath; these properties are going to be ignored.
+2024-08-03 12:16:32 WARN  pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2024-08-03 12:16:32 INFO  pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5434/db_items_orders]
+2024-08-03 12:16:32 INFO  pooling - HHH10001001: Connection properties: {password=****, user=postgres}
+2024-08-03 12:16:32 INFO  pooling - HHH10001003: Autocommit mode: false
+2024-08-03 12:16:32 INFO  DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2024-08-03 12:16:32 INFO  Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2024-08-03 12:16:33 INFO  access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@6ad6443] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2024-08-03 12:16:33 INFO  JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-08-03 12:16:33 DEBUG SQL - 
+    select
+        item0_.id as id1_2_0_,
+        item0_.group_id as group_id2_2_0_ 
+    from
+        items item0_ 
+    where
+        item0_.id=?
+2024-08-03 12:16:33 TRACE BasicBinder - binding parameter [1] as [BIGINT] - [8]
+2024-08-03 12:16:33 DEBUG SQL - 
+    select
+        group0_.id as id1_1_0_,
+        group0_.company_id as company_2_1_0_ 
+    from
+        groups group0_ 
+    where
+        group0_.id=?
+2024-08-03 12:16:33 TRACE BasicBinder - binding parameter [1] as [BIGINT] - [6]
+2024-08-03 12:16:33 DEBUG SQL - 
+    select
+        company0_.id as id1_0_0_ 
+    from
+        companies company0_ 
+    where
+        company0_.id=?
+2024-08-03 12:16:33 TRACE BasicBinder - binding parameter [1] as [BIGINT] - [11]
+2024-08-03 12:16:33 DEBUG SQL - 
+    /* insert nn.ru.entity4.Item
+        */ insert 
+        into
+            items
+            (group_id) 
+        values
+            (?)
+2024-08-03 12:16:33 TRACE BasicBinder - binding parameter [1] as [BIGINT] - [null]
+2024-08-03 12:16:33 DEBUG SQL - 
+    /* insert nn.ru.entity4.Group
+        */ insert 
+        into
+            groups
+            (company_id) 
+        values
+            (?)
+2024-08-03 12:16:33 TRACE BasicBinder - binding parameter [1] as [BIGINT] - [null]
+2024-08-03 12:16:36 DEBUG SQL - 
+    /* insert nn.ru.entity4.Item
+        */ insert 
+        into
+            items
+            (group_id) 
+        values
+            (?)
+2024-08-03 12:16:36 TRACE BasicBinder - binding parameter [1] as [BIGINT] - [null]
+2024-08-03 12:17:29 INFO  Version - HHH000412: Hibernate ORM core version 5.6.9.Final
+2024-08-03 12:17:29 INFO  Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-08-03 12:17:29 WARN  ConnectionProviderInitiator - HHH000022: c3p0 properties were encountered, but the c3p0 provider class was not found on the classpath; these properties are going to be ignored.
+2024-08-03 12:17:29 WARN  pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2024-08-03 12:17:29 INFO  pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5434/db_items_orders]
+2024-08-03 12:17:29 INFO  pooling - HHH10001001: Connection properties: {password=****, user=postgres}
+2024-08-03 12:17:29 INFO  pooling - HHH10001003: Autocommit mode: false
+2024-08-03 12:17:29 INFO  DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2024-08-03 12:17:30 INFO  Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2024-08-03 12:17:30 INFO  access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@6ad6443] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2024-08-03 12:17:30 INFO  JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-08-03 12:17:30 DEBUG SQL - 
+    select
+        item0_.id as id1_2_0_,
+        item0_.group_id as group_id2_2_0_ 
+    from
+        items item0_ 
+    where
+        item0_.id=?
+2024-08-03 12:17:30 TRACE BasicBinder - binding parameter [1] as [BIGINT] - [14]
+2024-08-03 12:17:30 DEBUG SQL - 
+    select
+        group0_.id as id1_1_0_,
+        group0_.company_id as company_2_1_0_ 
+    from
+        groups group0_ 
+    where
+        group0_.id=?
+2024-08-03 12:17:30 TRACE BasicBinder - binding parameter [1] as [BIGINT] - [16]
+2024-08-03 12:17:30 DEBUG SQL - 
+    select
+        company0_.id as id1_0_0_ 
+    from
+        companies company0_ 
+    where
+        company0_.id=?
+2024-08-03 12:17:30 TRACE BasicBinder - binding parameter [1] as [BIGINT] - [12]
+2024-08-03 12:17:30 DEBUG SQL - 
+    /* insert nn.ru.entity4.Item
+        */ insert 
+        into
+            items
+            (group_id) 
+        values
+            (?)
+2024-08-03 12:17:30 TRACE BasicBinder - binding parameter [1] as [BIGINT] - [null]
+2024-08-03 12:17:31 DEBUG SQL - 
+    /* insert nn.ru.entity4.Group
+        */ insert 
+        into
+            groups
+            (company_id) 
+        values
+            (?)
+2024-08-03 12:17:31 TRACE BasicBinder - binding parameter [1] as [BIGINT] - [null]
+2024-08-03 12:17:31 DEBUG SQL - 
+    select
+        company0_.id as id1_0_0_ 
+    from
+        companies company0_ 
+    where
+        company0_.id=?
+2024-08-03 12:17:31 TRACE BasicBinder - binding parameter [1] as [BIGINT] - [16]
+2024-08-03 12:17:31 DEBUG SQL - 
+    select
+        group0_.id as id1_1_0_,
+        group0_.company_id as company_2_1_0_ 
+    from
+        groups group0_ 
+    where
+        group0_.id=?
+2024-08-03 12:17:31 TRACE BasicBinder - binding parameter [1] as [BIGINT] - [14]
+2024-08-03 12:17:31 DEBUG SQL - 
+    select
+        company0_.id as id1_0_0_ 
+    from
+        companies company0_ 
+    where
+        company0_.id=?
+2024-08-03 12:17:31 TRACE BasicBinder - binding parameter [1] as [BIGINT] - [14]
+2024-08-03 12:17:32 DEBUG SQL - 
+    /* insert nn.ru.entity4.Item
+        */ insert 
+        into
+            items
+            (group_id) 
+        values
+            (?)
+2024-08-03 12:17:32 TRACE BasicBinder - binding parameter [1] as [BIGINT] - [16]
+2024-08-04 09:51:58 INFO  Version - HHH000412: Hibernate ORM core version 5.6.9.Final
+2024-08-04 09:51:59 INFO  Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-08-04 09:51:59 WARN  ConnectionProviderInitiator - HHH000022: c3p0 properties were encountered, but the c3p0 provider class was not found on the classpath; these properties are going to be ignored.
+2024-08-04 09:51:59 WARN  pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2024-08-04 09:51:59 INFO  pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5434/db_items_orders]
+2024-08-04 09:51:59 INFO  pooling - HHH10001001: Connection properties: {password=****, user=postgres}
+2024-08-04 09:51:59 INFO  pooling - HHH10001003: Autocommit mode: false
+2024-08-04 09:51:59 INFO  DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2024-08-04 09:51:59 WARN  JdbcEnvironmentInitiator - HHH000342: Could not obtain connection to query metadata
+java.lang.IllegalStateException: Cannot get a connection as the driver manager is not properly initialized
+	at org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl.getConnection(DriverManagerConnectionProviderImpl.java:220) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:181) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:68) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:35) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:101) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:237) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.engine.jdbc.internal.JdbcServicesImpl.configure(JdbcServicesImpl.java:51) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.configureService(StandardServiceRegistryImpl.java:107) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:246) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.engine.jdbc.connections.internal.BasicConnectionCreator.convertSqlException(BasicConnectionCreator.java:129) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.engine.jdbc.connections.internal.DriverConnectionCreator.makeConnection(DriverConnectionCreator.java:42) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.engine.jdbc.connections.internal.BasicConnectionCreator.createConnection(BasicConnectionCreator.java:62) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl$PooledConnections.addConnections(DriverManagerConnectionProviderImpl.java:457) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl$PooledConnections.<init>(DriverManagerConnectionProviderImpl.java:323) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl$PooledConnections.<init>(DriverManagerConnectionProviderImpl.java:297) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl$PooledConnections$Builder.build(DriverManagerConnectionProviderImpl.java:501) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl.buildPool(DriverManagerConnectionProviderImpl.java:101) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl.configure(DriverManagerConnectionProviderImpl.java:76) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.configureService(StandardServiceRegistryImpl.java:107) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:246) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.buildJdbcConnectionAccess(JdbcEnvironmentInitiator.java:146) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:66) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:35) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:101) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:237) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory.injectServices(DefaultIdentifierGeneratorFactory.java:175) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.injectDependencies(AbstractServiceRegistryImpl.java:286) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:243) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:173) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:127) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.build(MetadataBuildingProcess.java:86) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.boot.internal.MetadataBuilderImpl.build(MetadataBuilderImpl.java:479) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.boot.internal.MetadataBuilderImpl.build(MetadataBuilderImpl.java:85) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:709) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:746) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at nn.ru.HibernateTest.testGetEntityId(HibernateTest.java:171) ~[test/:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:568) ~[?:?]
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:725) ~[junit-platform-commons-1.8.2.jar:1.8.2]
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:149) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:140) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:84) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
+	at org.junit.jupiter.engine.execution.ExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(ExecutableInvoker.java:115) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.lambda$invoke$0(ExecutableInvoker.java:105) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:104) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:98) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$7(TestMethodTestDescriptor.java:214) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:210) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:135) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:66) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at java.util.ArrayList.forEach(ArrayList.java:1511) ~[?:?]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at java.util.ArrayList.forEach(ArrayList.java:1511) ~[?:?]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:107) ~[junit-platform-launcher-1.8.2.jar:1.8.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:88) ~[junit-platform-launcher-1.8.2.jar:1.8.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:54) ~[junit-platform-launcher-1.8.2.jar:1.8.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:67) [junit-platform-launcher-1.8.2.jar:1.8.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:52) [junit-platform-launcher-1.8.2.jar:1.8.2]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114) [junit-platform-launcher-1.8.2.jar:1.8.2]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:86) [junit-platform-launcher-1.8.2.jar:1.8.2]
+	at org.junit.platform.launcher.core.DefaultLauncherSession$DelegatingLauncher.execute(DefaultLauncherSession.java:86) [junit-platform-launcher-1.8.2.jar:1.8.2]
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.processAllTestClasses(JUnitPlatformTestClassProcessor.java:119) [gradle-testing-junit-platform-8.4.jar:8.4]
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.access$000(JUnitPlatformTestClassProcessor.java:94) [gradle-testing-junit-platform-8.4.jar:8.4]
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor.stop(JUnitPlatformTestClassProcessor.java:89) [gradle-testing-junit-platform-8.4.jar:8.4]
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:62) [gradle-testing-base-8.4.jar:8.4]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:568) ~[?:?]
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36) [gradle-messaging-8.4.jar:8.4]
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24) [gradle-messaging-8.4.jar:8.4]
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33) [gradle-messaging-8.4.jar:8.4]
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94) [gradle-messaging-8.4.jar:8.4]
+	at jdk.proxy1.$Proxy2.stop(Unknown Source) [?:?]
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$3.run(TestWorker.java:193) [gradle-testing-base-8.4.jar:8.4]
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129) [gradle-testing-base-8.4.jar:8.4]
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100) [gradle-testing-base-8.4.jar:8.4]
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60) [gradle-testing-base-8.4.jar:8.4]
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56) [gradle-worker-processes-8.4.jar:8.4]
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:113) [gradle-worker-processes-8.4.jar:8.4]
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:65) [gradle-worker-processes-8.4.jar:8.4]
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69) [gradle-worker.jar:?]
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74) [gradle-worker.jar:?]
+2024-08-04 09:51:59 INFO  Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2024-08-04 09:51:59 WARN  SqlExceptionHelper - SQL Error: 0, SQLState: 08001
+2024-08-04 09:51:59 ERROR SqlExceptionHelper - Connection to localhost:5434 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.
+2024-08-04 09:57:04 INFO  Version - HHH000412: Hibernate ORM core version 5.6.9.Final
+2024-08-04 09:57:04 INFO  Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-08-04 09:57:04 WARN  ConnectionProviderInitiator - HHH000022: c3p0 properties were encountered, but the c3p0 provider class was not found on the classpath; these properties are going to be ignored.
+2024-08-04 09:57:04 WARN  pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2024-08-04 09:57:04 INFO  pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5434/db_items_orders]
+2024-08-04 09:57:04 INFO  pooling - HHH10001001: Connection properties: {password=****, user=postgres}
+2024-08-04 09:57:04 INFO  pooling - HHH10001003: Autocommit mode: false
+2024-08-04 09:57:04 INFO  DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2024-08-04 09:57:05 INFO  Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2024-08-04 09:57:06 INFO  access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@6ad6443] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2024-08-04 09:57:06 INFO  JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-08-04 09:57:06 DEBUG SQL - 
+    select
+        item0_.id as id1_2_0_,
+        item0_.group_id as group_id2_2_0_ 
+    from
+        items item0_ 
+    where
+        item0_.id=?
+2024-08-04 09:57:06 TRACE BasicBinder - binding parameter [1] as [BIGINT] - [14]
+2024-08-04 09:57:07 DEBUG SQL - 
+    select
+        group0_.id as id1_1_0_,
+        group0_.company_id as company_2_1_0_ 
+    from
+        groups group0_ 
+    where
+        group0_.id=?
+2024-08-04 09:57:07 TRACE BasicBinder - binding parameter [1] as [BIGINT] - [16]
+2024-08-04 09:57:07 DEBUG SQL - 
+    select
+        company0_.id as id1_0_0_ 
+    from
+        companies company0_ 
+    where
+        company0_.id=?
+2024-08-04 09:57:07 TRACE BasicBinder - binding parameter [1] as [BIGINT] - [12]
+2024-08-04 09:57:07 DEBUG SQL - 
+    /* insert nn.ru.entity4.Item
+        */ insert 
+        into
+            items
+            (group_id) 
+        values
+            (?)
+2024-08-04 09:57:07 TRACE BasicBinder - binding parameter [1] as [BIGINT] - [null]
+2024-08-04 09:57:07 DEBUG SQL - 
+    /* insert nn.ru.entity4.Group
+        */ insert 
+        into
+            groups
+            (company_id) 
+        values
+            (?)
+2024-08-04 09:57:07 TRACE BasicBinder - binding parameter [1] as [BIGINT] - [null]
+2024-08-04 09:57:07 DEBUG SQL - 
+    /* insert nn.ru.entity4.Item
+        */ insert 
+        into
+            items
+            (group_id) 
+        values
+            (?)
+2024-08-04 09:57:07 TRACE BasicBinder - binding parameter [1] as [BIGINT] - [16]
+2024-08-04 09:57:07 DEBUG SQL - 
+    select
+        company0_.id as id1_0_0_ 
+    from
+        companies company0_ 
+    where
+        company0_.id=?
+2024-08-04 09:57:07 TRACE BasicBinder - binding parameter [1] as [BIGINT] - [16]
+2024-08-04 09:57:07 DEBUG SQL - 
+    select
+        group0_.id as id1_1_0_,
+        group0_.company_id as company_2_1_0_ 
+    from
+        groups group0_ 
+    where
+        group0_.id=?
+2024-08-04 09:57:07 TRACE BasicBinder - binding parameter [1] as [BIGINT] - [14]
+2024-08-04 09:57:07 DEBUG SQL - 
+    select
+        company0_.id as id1_0_0_ 
+    from
+        companies company0_ 
+    where
+        company0_.id=?
+2024-08-04 09:57:07 TRACE BasicBinder - binding parameter [1] as [BIGINT] - [14]
+2024-08-04 09:57:28 INFO  pooling - HHH10001008: Cleaning up connection pool [jdbc:postgresql://localhost:5434/db_items_orders]
+2024-08-04 10:03:48 INFO  Version - HHH000412: Hibernate ORM core version 5.6.9.Final
+2024-08-04 10:03:49 INFO  Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-08-04 10:03:49 WARN  ConnectionProviderInitiator - HHH000022: c3p0 properties were encountered, but the c3p0 provider class was not found on the classpath; these properties are going to be ignored.
+2024-08-04 10:03:49 WARN  pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2024-08-04 10:03:49 INFO  pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5434/db_items_orders]
+2024-08-04 10:03:49 INFO  pooling - HHH10001001: Connection properties: {password=****, user=postgres}
+2024-08-04 10:03:49 INFO  pooling - HHH10001003: Autocommit mode: false
+2024-08-04 10:03:49 INFO  DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2024-08-04 10:03:49 INFO  Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2024-08-04 10:03:50 INFO  access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@6ad6443] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2024-08-04 10:03:50 INFO  JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-08-04 10:03:50 DEBUG SQL - 
+    select
+        item0_.id as id1_2_0_,
+        item0_.group_id as group_id2_2_0_ 
+    from
+        items item0_ 
+    where
+        item0_.id=?
+2024-08-04 10:03:50 TRACE BasicBinder - binding parameter [1] as [BIGINT] - [14]
+2024-08-04 10:03:50 DEBUG SQL - 
+    select
+        group0_.id as id1_1_0_,
+        group0_.company_id as company_2_1_0_ 
+    from
+        groups group0_ 
+    where
+        group0_.id=?
+2024-08-04 10:03:50 TRACE BasicBinder - binding parameter [1] as [BIGINT] - [16]
+2024-08-04 10:03:50 DEBUG SQL - 
+    select
+        company0_.id as id1_0_0_ 
+    from
+        companies company0_ 
+    where
+        company0_.id=?
+2024-08-04 10:03:50 TRACE BasicBinder - binding parameter [1] as [BIGINT] - [12]
+2024-08-04 10:03:50 DEBUG SQL - 
+    /* insert nn.ru.entity4.Company
+        */ insert 
+        into
+            companies
+            default 
+        values
+            
+2024-08-04 10:03:50 DEBUG SQL - 
+    /* insert nn.ru.entity4.Group
+        */ insert 
+        into
+            groups
+            (company_id) 
+        values
+            (?)
+2024-08-04 10:03:50 TRACE BasicBinder - binding parameter [1] as [BIGINT] - [null]
+2024-08-04 10:03:50 DEBUG SQL - 
+    /* insert nn.ru.entity4.Item
+        */ insert 
+        into
+            items
+            (group_id) 
+        values
+            (?)
+2024-08-04 10:03:50 TRACE BasicBinder - binding parameter [1] as [BIGINT] - [16]
+2024-08-04 10:14:56 INFO  Version - HHH000412: Hibernate ORM core version 5.6.9.Final
+2024-08-04 10:14:56 INFO  Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-08-04 10:14:57 WARN  ConnectionProviderInitiator - HHH000022: c3p0 properties were encountered, but the c3p0 provider class was not found on the classpath; these properties are going to be ignored.
+2024-08-04 10:14:57 WARN  pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2024-08-04 10:14:57 INFO  pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5434/db_items_orders]
+2024-08-04 10:14:57 INFO  pooling - HHH10001001: Connection properties: {password=****, user=postgres}
+2024-08-04 10:14:57 INFO  pooling - HHH10001003: Autocommit mode: false
+2024-08-04 10:14:57 INFO  DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2024-08-04 10:14:57 INFO  Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2024-08-04 10:14:57 INFO  access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@6ad6443] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2024-08-04 10:14:58 INFO  JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-08-04 10:14:58 DEBUG SQL - 
+    select
+        company0_.id as id1_0_0_ 
+    from
+        companies company0_ 
+    where
+        company0_.id=?
+2024-08-04 10:14:58 TRACE BasicBinder - binding parameter [1] as [BIGINT] - [12]
+2024-08-04 10:14:58 DEBUG SQL - 
+    /* insert nn.ru.entity4.Company
+        */ insert 
+        into
+            companies
+            default 
+        values
+            
+2024-08-04 10:14:58 DEBUG SQL - 
+    select
+        group0_.id as id1_1_0_,
+        group0_.company_id as company_2_1_0_ 
+    from
+        groups group0_ 
+    where
+        group0_.id=?
+2024-08-04 10:14:58 TRACE BasicBinder - binding parameter [1] as [BIGINT] - [16]
+2024-08-04 10:14:58 DEBUG SQL - 
+    /* insert nn.ru.entity4.Group
+        */ insert 
+        into
+            groups
+            (company_id) 
+        values
+            (?)
+2024-08-04 10:14:58 TRACE BasicBinder - binding parameter [1] as [BIGINT] - [null]
+2024-08-04 10:14:58 DEBUG SQL - 
+    select
+        item0_.id as id1_2_0_,
+        item0_.group_id as group_id2_2_0_ 
+    from
+        items item0_ 
+    where
+        item0_.id=?
+2024-08-04 10:14:58 TRACE BasicBinder - binding parameter [1] as [BIGINT] - [14]
+2024-08-04 10:14:58 DEBUG SQL - 
+    /* insert nn.ru.entity4.Item
+        */ insert 
+        into
+            items
+            (group_id) 
+        values
+            (?)
+2024-08-04 10:14:58 TRACE BasicBinder - binding parameter [1] as [BIGINT] - [16]
+2024-08-04 10:15:59 INFO  Version - HHH000412: Hibernate ORM core version 5.6.9.Final
+2024-08-04 10:15:59 INFO  Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-08-04 10:16:00 WARN  ConnectionProviderInitiator - HHH000022: c3p0 properties were encountered, but the c3p0 provider class was not found on the classpath; these properties are going to be ignored.
+2024-08-04 10:16:00 WARN  pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2024-08-04 10:16:00 INFO  pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5434/db_items_orders]
+2024-08-04 10:16:00 INFO  pooling - HHH10001001: Connection properties: {password=****, user=postgres}
+2024-08-04 10:16:00 INFO  pooling - HHH10001003: Autocommit mode: false
+2024-08-04 10:16:00 INFO  DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2024-08-04 10:16:00 INFO  Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2024-08-04 10:16:01 INFO  access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@6ad6443] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2024-08-04 10:16:01 INFO  JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-08-04 10:16:01 DEBUG SQL - 
+    select
+        company0_.id as id1_0_0_ 
+    from
+        companies company0_ 
+    where
+        company0_.id=?
+2024-08-04 10:16:01 TRACE BasicBinder - binding parameter [1] as [BIGINT] - [12]
+2024-08-04 10:16:01 DEBUG SQL - 
+    select
+        group0_.id as id1_1_0_,
+        group0_.company_id as company_2_1_0_ 
+    from
+        groups group0_ 
+    where
+        group0_.id=?
+2024-08-04 10:16:01 TRACE BasicBinder - binding parameter [1] as [BIGINT] - [16]
+2024-08-04 10:16:01 DEBUG SQL - 
+    select
+        item0_.id as id1_2_0_,
+        item0_.group_id as group_id2_2_0_ 
+    from
+        items item0_ 
+    where
+        item0_.id=?
+2024-08-04 10:16:01 TRACE BasicBinder - binding parameter [1] as [BIGINT] - [14]
+2024-08-04 10:16:01 DEBUG SQL - 
+    /* insert nn.ru.entity4.Company
+        */ insert 
+        into
+            companies
+            default 
+        values
+            
+2024-08-04 10:16:01 DEBUG SQL - 
+    /* insert nn.ru.entity4.Group
+        */ insert 
+        into
+            groups
+            (company_id) 
+        values
+            (?)
+2024-08-04 10:16:01 TRACE BasicBinder - binding parameter [1] as [BIGINT] - [null]
+2024-08-04 10:16:02 DEBUG SQL - 
+    /* insert nn.ru.entity4.Item
+        */ insert 
+        into
+            items
+            (group_id) 
+        values
+            (?)
+2024-08-04 10:16:02 TRACE BasicBinder - binding parameter [1] as [BIGINT] - [16]
+2024-08-04 10:23:04 INFO  Version - HHH000412: Hibernate ORM core version 5.6.9.Final
+2024-08-04 10:23:04 INFO  Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-08-04 10:23:04 WARN  ConnectionProviderInitiator - HHH000022: c3p0 properties were encountered, but the c3p0 provider class was not found on the classpath; these properties are going to be ignored.
+2024-08-04 10:23:04 WARN  pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2024-08-04 10:23:04 INFO  pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5434/db_items_orders]
+2024-08-04 10:23:04 INFO  pooling - HHH10001001: Connection properties: {password=****, user=postgres}
+2024-08-04 10:23:04 INFO  pooling - HHH10001003: Autocommit mode: false
+2024-08-04 10:23:04 INFO  DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2024-08-04 10:23:04 INFO  Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2024-08-04 10:23:05 INFO  access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@6ad6443] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2024-08-04 10:23:05 INFO  JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-08-04 10:23:05 DEBUG SQL - 
+    select
+        company0_.id as id1_0_0_ 
+    from
+        companies company0_ 
+    where
+        company0_.id=?
+2024-08-04 10:23:05 TRACE BasicBinder - binding parameter [1] as [BIGINT] - [14]
+2024-08-04 10:23:05 DEBUG SQL - 
+    select
+        group0_.id as id1_1_0_,
+        group0_.company_id as company_2_1_0_ 
+    from
+        groups group0_ 
+    where
+        group0_.id=?
+2024-08-04 10:23:05 TRACE BasicBinder - binding parameter [1] as [BIGINT] - [16]
+2024-08-04 10:23:05 DEBUG SQL - 
+    select
+        item0_.id as id1_2_0_,
+        item0_.group_id as group_id2_2_0_ 
+    from
+        items item0_ 
+    where
+        item0_.id=?
+2024-08-04 10:23:05 TRACE BasicBinder - binding parameter [1] as [BIGINT] - [17]
+2024-08-04 10:23:05 DEBUG SQL - 
+    /* insert nn.ru.entity4.Company
+        */ insert 
+        into
+            companies
+            default 
+        values
+            
+2024-08-04 10:23:05 DEBUG SQL - 
+    /* insert nn.ru.entity4.Group
+        */ insert 
+        into
+            groups
+            (company_id) 
+        values
+            (?)
+2024-08-04 10:23:05 TRACE BasicBinder - binding parameter [1] as [BIGINT] - [14]
+2024-08-04 10:23:05 DEBUG SQL - 
+    /* insert nn.ru.entity4.Item
+        */ insert 
+        into
+            items
+            (group_id) 
+        values
+            (?)
+2024-08-04 10:23:05 TRACE BasicBinder - binding parameter [1] as [BIGINT] - [16]
+2024-08-04 10:24:21 INFO  pooling - HHH10001008: Cleaning up connection pool [jdbc:postgresql://localhost:5434/db_items_orders]
+2024-08-04 10:24:46 INFO  Version - HHH000412: Hibernate ORM core version 5.6.9.Final
+2024-08-04 10:24:46 INFO  Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-08-04 10:24:46 WARN  ConnectionProviderInitiator - HHH000022: c3p0 properties were encountered, but the c3p0 provider class was not found on the classpath; these properties are going to be ignored.
+2024-08-04 10:24:46 WARN  pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2024-08-04 10:24:46 INFO  pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5434/db_items_orders]
+2024-08-04 10:24:46 INFO  pooling - HHH10001001: Connection properties: {password=****, user=postgres}
+2024-08-04 10:24:46 INFO  pooling - HHH10001003: Autocommit mode: false
+2024-08-04 10:24:46 INFO  DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2024-08-04 10:24:47 INFO  Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2024-08-04 10:24:47 INFO  access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@6ad6443] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2024-08-04 10:24:47 INFO  JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-08-04 10:24:47 DEBUG SQL - 
+    select
+        company0_.id as id1_0_0_ 
+    from
+        companies company0_ 
+    where
+        company0_.id=?
+2024-08-04 10:24:47 TRACE BasicBinder - binding parameter [1] as [BIGINT] - [14]
+2024-08-04 10:24:47 DEBUG SQL - 
+    select
+        group0_.id as id1_1_0_,
+        group0_.company_id as company_2_1_0_ 
+    from
+        groups group0_ 
+    where
+        group0_.id=?
+2024-08-04 10:24:47 TRACE BasicBinder - binding parameter [1] as [BIGINT] - [16]
+2024-08-04 10:24:47 DEBUG SQL - 
+    select
+        item0_.id as id1_2_0_,
+        item0_.group_id as group_id2_2_0_ 
+    from
+        items item0_ 
+    where
+        item0_.id=?
+2024-08-04 10:24:47 TRACE BasicBinder - binding parameter [1] as [BIGINT] - [17]
+2024-08-04 10:24:47 DEBUG SQL - 
+    /* insert nn.ru.entity4.Company
+        */ insert 
+        into
+            companies
+            default 
+        values
+            
+2024-08-04 10:24:47 DEBUG SQL - 
+    /* insert nn.ru.entity4.Group
+        */ insert 
+        into
+            groups
+            (company_id) 
+        values
+            (?)
+2024-08-04 10:24:47 TRACE BasicBinder - binding parameter [1] as [BIGINT] - [14]
+2024-08-04 10:24:47 DEBUG SQL - 
+    /* insert nn.ru.entity4.Item
+        */ insert 
+        into
+            items
+            (group_id) 
+        values
+            (?)
+2024-08-04 10:24:47 TRACE BasicBinder - binding parameter [1] as [BIGINT] - [16]
+2024-08-04 10:56:27 INFO  pooling - HHH10001008: Cleaning up connection pool [jdbc:postgresql://localhost:5434/db_items_orders]

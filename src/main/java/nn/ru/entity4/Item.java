@@ -18,23 +18,20 @@ public class Item {
     @Column(name = "id")
     private Long id;
 
-
-    // @OneToOne: Item-Order - прямая
-//    @OneToOne(
-//            fetch = FetchType.LAZY)
-//    @JoinColumn(
-//            name = "group_id",
-//            unique = true,
-//            nullable = false)
-//    private Group group;
-
+    // @OneToOne: Item-Group - прямая
+    @OneToOne(
+            fetch = FetchType.LAZY)
+    @JoinColumn(
+            name = "group_id")
+    private Group group;
 
     // equals & hashCode
-//    @Override
-//    public String toString() {
-//        return "Item{" +
-//                "id=" + id +
-//                ", group=" + (group != null ? "Order{id=" + group.getId() + "}" : "null") +
-//                '}';
-//    }
+    @Override
+    public String toString() {
+        return "Item{" +
+                "id=" + id +
+                ", group=" + (group != null ? "Group{id=" + group.getId() + "}" : "null") +
+                '}';
+    }
+
 }

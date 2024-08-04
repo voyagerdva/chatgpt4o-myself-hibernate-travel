@@ -18,20 +18,12 @@ public class Company {
     @Column(name = "id")
     private Long id;
 
-    // @OneToOne: Company-Order - обратная
-//    @OneToOne(
-//            fetch = FetchType.LAZY,
-//            mappedBy = "company")
-//    private Group group;
-
     // equals & hashCode
-//    @Override
-//    public String toString() {
-//        return "Item{" +
-//                "id=" + id +
-//                ", group=" + (group != null ? "Order{id=" + group.getId() + "}" : "null") +
-//                '}';
-//    }
-
-
+    @Override
+    public String toString() {
+        return "Item{" +
+                "id=" + id +
+                //                ", group=" + (group != null ? "Order{id=" + group.getId() + "}" : "null") +
+                '}';
+    }
 }
