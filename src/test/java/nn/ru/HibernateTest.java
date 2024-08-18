@@ -191,11 +191,105 @@ public class HibernateTest {
         session.save(item);
 
         // ЗАКРЫВАЕМ СЕССИЮ:
-            session.getTransaction().commit();
+        session.getTransaction().commit();
         session.close();
 
         // ЗАКРЫВАЕМ ФАКБРИКУ СЕССИЙ:
         factory.close();
 
     }
+
+    @Test
+    public void testLoopback_ItemGroup() {
+
+        // СОЗДАЕМ КОНФИГУРАЦИЮ И ДОБАВЛЯЕМ СУЩНОСТИ:
+        Configuration configuration = new Configuration().configure();
+        configuration.addAnnotatedClass(nn.ru.entity4.Item.class);
+        configuration.addAnnotatedClass(nn.ru.entity4.Group.class);
+
+        // СОЗДАЕМ ФАКБРИКУ СЕССИЙ, ОТКРЫВАЕМ СЕССИЮ И ОТКРЫВАЕМ ТРАНЗАКЦИЮ:
+        SessionFactory factory = configuration.buildSessionFactory();
+        Session session = factory.openSession();
+        Transaction transaction = session.beginTransaction();
+
+
+        // РАБОТА С ДАННЫМИ:
+
+        Group group = new Group();
+        Item item = new Item();
+
+        group.setItem(item);
+        item.setGroup(group);
+
+        session.save(item);
+
+        // ЗАКРЫВАЕМ СЕССИЮ:
+        session.getTransaction().commit();
+        session.close();
+
+        // ЗАКРЫВАЕМ ФАКБРИКУ СЕССИЙ:
+        factory.close();
+
+    }
+
+    @Test
+    public void testLoopback_ItemGroup_GetValues() {
+
+        // СОЗДАЕМ КОНФИГУРАЦИЮ И ДОБАВЛЯЕМ СУЩНОСТИ:
+        Configuration configuration = new Configuration().configure();
+        configuration.addAnnotatedClass(nn.ru.entity4.Item.class);
+        configuration.addAnnotatedClass(nn.ru.entity4.Group.class);
+
+        // СОЗДАЕМ ФАКБРИКУ СЕССИЙ, ОТКРЫВАЕМ СЕССИЮ И ОТКРЫВАЕМ ТРАНЗАКЦИЮ:
+        SessionFactory factory = configuration.buildSessionFactory();
+        Session session = factory.openSession();
+        Transaction transaction = session.beginTransaction();
+
+
+        // РАБОТА С ДАННЫМИ:
+        Item item = session.get(Item.class, 3L);
+        System.out.println(item);
+
+        Group group = session.get(Group.class, 4L);
+        System.out.println(group);
+
+        // ЗАКРЫВАЕМ СЕССИЮ:
+        session.getTransaction().commit();
+        session.close();
+
+        // ЗАКРЫВАЕМ ФАКБРИКУ СЕССИЙ:
+        factory.close();
+    }
+
+    @Test
+    public void testLoopback_ItemGroup_Delete() {
+
+        // СОЗДАЕМ КОНФИГУРАЦИЮ И ДОБАВЛЯЕМ СУЩНОСТИ:
+        Configuration configuration = new Configuration().configure();
+        configuration.addAnnotatedClass(nn.ru.entity4.Item.class);
+        configuration.addAnnotatedClass(nn.ru.entity4.Group.class);
+
+        // СОЗДАЕМ ФАКБРИКУ СЕССИЙ, ОТКРЫВАЕМ СЕССИЮ И ОТКРЫВАЕМ ТРАНЗАКЦИЮ:
+        SessionFactory factory = configuration.buildSessionFactory();
+        Session session = factory.openSession();
+        Transaction transaction = session.beginTransaction();
+
+
+        // РАБОТА С ДАННЫМИ:
+//        Item item = session.get(Item.class, 4L);
+//        session.delete(item);
+
+        Group group = session.get(Group.class, 5L);
+        group.getItem().setGroup(null);
+        session.delete(group);
+
+        // ЗАКРЫВАЕМ СЕССИЮ:
+        session.getTransaction().commit();
+        session.close();
+
+        // ЗАКРЫВАЕМ ФАКБРИКУ СЕССИЙ:
+        factory.close();
+    }
+
+
 }

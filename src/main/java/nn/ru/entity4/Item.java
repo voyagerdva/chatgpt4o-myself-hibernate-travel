@@ -18,18 +18,20 @@ public class Item {
     @Column(name = "id")
     private Long id;
 
+
     // @OneToOne: Item-Group - прямая
     @OneToOne(
-            fetch = FetchType.LAZY)
+            fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     @JoinColumn(
             name = "group_id")
     private Group group;
+
 
     // equals & hashCode
     @Override
     public String toString() {
         return "Item{" +
-                "id=" + id +
+                  "id=" + id +
                 ", group=" + (group != null ? "Group{id=" + group.getId() + "}" : "null") +
                 '}';
     }

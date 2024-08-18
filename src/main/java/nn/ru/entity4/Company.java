@@ -18,10 +18,11 @@ public class Company {
     @Column(name = "id")
     private Long id;
 
+
     // equals & hashCode
     @Override
     public String toString() {
-        return "Item{" +
+        return "Company{" +
                 "id=" + id +
                 //                ", group=" + (group != null ? "Order{id=" + group.getId() + "}" : "null") +
                 '}';
