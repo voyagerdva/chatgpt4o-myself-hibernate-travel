@@ -291,5 +291,48 @@ public class HibernateTest {
         factory.close();
     }
 
+    @Test
+    public void testLoopback_ItemGroupCompany() {
+
+        // СОЗДАЕМ КОНФИГУРАЦИЮ И ДОБАВЛЯЕМ СУЩНОСТИ:
+        Configuration configuration = new Configuration().configure();
+        configuration.addAnnotatedClass(nn.ru.entity4.Item.class);
+        configuration.addAnnotatedClass(nn.ru.entity4.Group.class);
+        configuration.addAnnotatedClass(nn.ru.entity4.Company.class);
+
+        // СОЗДАЕМ ФАКБРИКУ СЕССИЙ, ОТКРЫВАЕМ СЕССИЮ И ОТКРЫВАЕМ ТРАНЗАКЦИЮ:
+        SessionFactory factory = configuration.buildSessionFactory();
+        Session session = factory.openSession();
+        Transaction transaction = session.beginTransaction();
+
+
+        // РАБОТА С ДАННЫМИ:
+
+        Group group = new Group();
+        Item item = new Item();
+        Company company = new Company();
+
+        item.setGroup(group);
+
+        group.setItem(item);
+        group.setCompany(company);
+
+        company.setGroup(group);
+
+        session.save(item);
+
+
+//        session.save(company);
+
+        // ЗАКРЫВАЕМ СЕССИЮ:
+        session.getTransaction().commit();
+        session.close();
+
+        // ЗАКРЫВАЕМ ФАКБРИКУ СЕССИЙ:
+        factory.close();
+
+    }
+
+
 
 }
